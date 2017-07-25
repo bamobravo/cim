@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from www.satriathemes.com/blessing/features.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 16 Jul 2017 10:28:32 GMT -->
+<!-- Mirrored from www.satriathemes.com/blessing/features by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 16 Jul 2017 10:28:32 GMT -->
 <head>
     <meta charset="utf-8">
     <title>Blessing</title>
@@ -10,7 +10,7 @@
     <meta name="author" content="">
 
     <!-- LOAD CSS FILES -->
-    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link href="<?= base_url() ?>css/main.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -26,9 +26,9 @@
                         <!-- logo begin -->
                         <div id="logo">
                             <div class="inner">
-                                <a href="index-2.html">
-                                    <img src="img/logo.png" alt="" class="logo-1">
-                                    <img src="img/logo-2.png" alt="" class="logo-2">
+                                <a href="index-2">
+                                    <img src="<?= base_url() ?>img/logo.png" alt="" class="logo-1">
+                                    <img src="<?= base_url() ?>img/logo-2.png" alt="" class="logo-2">
                                 </a>
 
                             </div>
@@ -42,35 +42,35 @@
                         <!-- mainmenu begin -->
                         <div id="mainmenu-container">
                             <ul id="mainmenu">
-                                <li><a href="index-2.html">Home</a>
+                                <li><a href="index-2">Home</a>
                                     <ul>
-                                        <li><a href="index-2.html">Homepage 1</a></li>
-                                        <li><a href="index-3.html">Homepage 2</a></li>
-                                        <li><a href="index-4.html">Homepage 3</a></li>
+                                        <li><a href="index-2">Homepage 1</a></li>
+                                        <li><a href="index-3">Homepage 2</a></li>
+                                        <li><a href="index-4">Homepage 3</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="events.html">Events</a>
+                                <li><a href="events">Events</a>
                                     <ul>
-                                        <li><a href="events.html">Events List</a></li>
-                                        <li><a href="events-calendar.html">Events Calendar</a></li>
-                                        <li><a href="event-single.html">Single Page</a></li>
+                                        <li><a href="events">Events List</a></li>
+                                        <li><a href="events-calendar">Events Calendar</a></li>
+                                        <li><a href="event-single">Single Page</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="sermons.html">Sermons</a>
+                                <li><a href="sermons">Sermons</a>
                                     <ul>
-                                        <li><a href="sermons.html">Sermons List</a></li>
-                                        <li><a href="sermon-single.html">Single Page</a></li>
+                                        <li><a href="sermons">Sermons List</a></li>
+                                        <li><a href="sermon-single">Single Page</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="features.html">Features</a></li>
-                                <li><a href="news.html">News</a>
+                                <li><a href="features">Features</a></li>
+                                <li><a href="news">News</a>
 									<ul>
-                                        <li><a href="news.html">News List</a></li>
-                                        <li><a href="news-single.html">Single Page</a></li>
+                                        <li><a href="news">News List</a></li>
+                                        <li><a href="news-single">Single Page</a></li>
                                     </ul>
 								</li>
-                                <li><a href="gallery.html">Gallery</a></li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="gallery">Gallery</a></li>
+                                <li><a href="contact">Contact</a></li>
                             </ul>
                         </div>
                         <!-- mainmenu close -->
@@ -121,7 +121,7 @@
                             <ul>
                                 <li data-transition="fade" data-slotamount="10" data-masterspeed="1500">
                                     <!--  BACKGROUND IMAGE -->
-                                    <img src="img-rev-slider/bg-1.jpg" alt="">
+                                    <img src="<?= base_url() ?>img-rev-slider/bg-1.jpg" alt="">
                                     <div class="tp-caption border-v lft"
                                         data-x="540"
                                         data-y="center"
@@ -172,7 +172,7 @@
 
                                 <li data-transition="fade" data-slotamount="10" data-masterspeed="1500">
                                     <!--  BACKGROUND IMAGE -->
-                                    <img src="img-rev-slider/bg-2.jpg" alt="">
+                                    <img src="<?= base_url() ?>img-rev-slider/bg-2.jpg" alt="">
                                     <div class="tp-caption custom-font-1 lft"
                                         data-x="left"
                                         data-y="140"
@@ -214,7 +214,7 @@
 
                                 <li data-transition="fade" data-slotamount="10" data-masterspeed="1500">
                                     <!--  BACKGROUND IMAGE -->
-                                    <img src="img-rev-slider/bg-3.jpg" alt="">
+                                    <img src="<?= base_url() ?>img-rev-slider/bg-3.jpg" alt="">
                                     <div class="tp-caption border-v lft"
                                         data-x="540"
                                         data-y="center"
@@ -283,7 +283,7 @@
                                 <span class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                                 </span>
                             </div>
-                            <img src="img/events/pic%20(1).jpg" alt="">
+                            <img src="<?= base_url() ?>img/events/pic%20(1).jpg" alt="">
                         </div>
 
                         <div class="item">
@@ -295,7 +295,7 @@
                                 <span class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                                 </span>
                             </div>
-                            <img src="img/events/pic%20(2).jpg" alt="">
+                            <img src="<?= base_url() ?>img/events/pic%20(2).jpg" alt="">
                         </div>
 
                         <div class="item">
@@ -307,7 +307,7 @@
                                 <span class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                                 </span>
                             </div>
-                            <img src="img/events/pic%20(3).jpg" alt="">
+                            <img src="<?= base_url() ?>img/events/pic%20(3).jpg" alt="">
                         </div>
 
                         <div class="item">
@@ -319,7 +319,7 @@
                                 <span class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                                 </span>
                             </div>
-                            <img src="img/events/pic%20(1).jpg" alt="">
+                            <img src="<?= base_url() ?>img/events/pic%20(1).jpg" alt="">
                         </div>
 
                         <div class="item">
@@ -331,7 +331,7 @@
                                 <span class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                                 </span>
                             </div>
-                            <img src="img/events/pic%20(2).jpg" alt="">
+                            <img src="<?= base_url() ?>img/events/pic%20(2).jpg" alt="">
                         </div>
 
                         <div class="item">
@@ -343,7 +343,7 @@
                                 <span class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                                 </span>
                             </div>
-                            <img src="img/events/pic%20(3).jpg" alt="">
+                            <img src="<?= base_url() ?>img/events/pic%20(3).jpg" alt="">
                         </div>
 
                     </div>
@@ -375,17 +375,17 @@
                         <div class="col-md-8 col-md-offset-2">
                             <div id="testi-carousel" class="testi-slider text-center wow fadeInUp">
                                 <div class="item">
-                                    <img src="img/testi/pic%20(1).jpg" alt="" class="img-circle">
+                                    <img src="<?= base_url() ?>img/testi/pic%20(1).jpg" alt="" class="img-circle">
                                     <blockquote>Blessing theme has a real desire and heart for ministry within the local church</blockquote>
                                     <span class="testi-by">Aline Drummond</span>
                                 </div>
                                 <div class="item">
-                                    <img src="img/testi/pic%20(2).jpg" alt="" class="img-circle">
+                                    <img src="<?= base_url() ?>img/testi/pic%20(2).jpg" alt="" class="img-circle">
                                     <blockquote>I Just wanted to let you know how pleased we are and how great the Blessing theme is working for our National Church </blockquote>
                                     <span class="testi-by">Mortimer Elmo</span>
                                 </div>
                                 <div class="item">
-                                    <img src="img/testi/pic%20(3).jpg" alt="" class="img-circle">
+                                    <img src="<?= base_url() ?>img/testi/pic%20(3).jpg" alt="" class="img-circle">
                                     <blockquote>
                                         Get in touch with Blessing theme today and get ready to see your church grow!
 
@@ -408,15 +408,15 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-4 animated" data-animation="fadeInLeftBig">
-                                <img src="img/events/pic%20(1).jpg" class="img-responsive" alt="">
+                                <img src="<?= base_url() ?>img/events/pic%20(1).jpg" class="img-responsive" alt="">
                             </div>
 
                             <div class="col-md-4 animated" data-animation="fadeInDownBig">
-                                <img src="img/events/pic%20(2).jpg" class="img-responsive" alt="">
+                                <img src="<?= base_url() ?>img/events/pic%20(2).jpg" class="img-responsive" alt="">
                             </div>
 
                             <div class="col-md-4 animated" data-animation="fadeInRightBig">
-                                <img src="img/events/pic%20(3).jpg" class="img-responsive" alt="">
+                                <img src="<?= base_url() ?>img/events/pic%20(3).jpg" class="img-responsive" alt="">
                             </div>
                         </div>
                     </div>
@@ -455,30 +455,28 @@
     </div>
 
     <!-- LOAD JS FILES -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.isotope.min.js"></script>
-    <script src="js/jquery.prettyPhoto.js"></script>
-    <script src="js/easing.js"></script>
-    <script src="js/jquery.ui.totop.js"></script>
-    <script src="js/selectnav.js"></script>
-    <script src="js/ender.js"></script>
-    <script src="js/responsiveslides.min.js"></script>
-    <script src="js/owl.carousel.js"></script>
-    <script src="js/jquery.fitvids.js"></script>
-    <script src="js/jquery.plugin.js"></script>
-    <script src="js/jquery.countdown.js"></script>
-    <script src="js/countdown-custom.js"></script>
-    <script src="js/contact.js"></script>
-    <script src="js/wow.min.js"></script>	
-    <script src="js/custom.js"></script>
+    <script src="<?= base_url() ?>js/jquery.min.js"></script>
+    <script src="<?= base_url() ?>js/bootstrap.min.js"></script>
+    <script src="<?= base_url() ?>js/jquery.isotope.min.js"></script>
+    <script src="<?= base_url() ?>js/jquery.prettyPhoto.js"></script>
+    <script src="<?= base_url() ?>js/easing.js"></script>
+    <script src="<?= base_url() ?>js/jquery.ui.totop.js"></script>
+    <script src="<?= base_url() ?>js/selectnav.js"></script>
+    <script src="<?= base_url() ?>js/ender.js"></script>
+    <script src="<?= base_url() ?>js/responsiveslides.min.js"></script>
+    <script src="<?= base_url() ?>js/owl.carousel.js"></script>
+    <script src="<?= base_url() ?>js/jquery.fitvids.js"></script>
+    <script src="<?= base_url() ?>js/jquery.plugin.js"></script>
+    <script src="<?= base_url() ?>js/jquery.countdown.js"></script>
+    <script src="<?= base_url() ?>js/countdown-custom.js"></script>
+    <script src="<?= base_url() ?>js/contact.js"></script>
+    <script src="<?= base_url() ?>js/wow.min.js"></script>	
+    <script src="<?= base_url() ?>js/custom.js"></script>
 
     <!-- SLIDER REVOLUTION SCRIPTS  -->
-    <script type="text/javascript" src="rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
-    <script type="text/javascript" src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
-    <script src="js/rev-setting-1.html"></script>
+    <script type="text/javascript" src="<?= base_url() ?>rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+    <script type="text/javascript" src="<?= base_url() ?>rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="<?= base_url() ?>js/rev-setting-1.html"></script>
 
 </body>
-
-<!-- Mirrored from www.satriathemes.com/blessing/features.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 16 Jul 2017 10:28:35 GMT -->
 </html>

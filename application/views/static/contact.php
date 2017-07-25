@@ -190,7 +190,7 @@
         <!-- footer close -->
     </div>
 
-<?php include_once 'resources.php' ?>
+<?php include_once 'includes/resource.php' ?>
 
 </body>
 
