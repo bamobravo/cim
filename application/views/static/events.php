@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from www.satriathemes.com/blessing/events.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 16 Jul 2017 10:28:09 GMT -->
+<!-- Mirrored from www.satriathemes.com/blessing/events by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 16 Jul 2017 10:28:09 GMT -->
 <head>
     <meta charset="utf-8">
     <title>Blessing</title>
@@ -10,11 +10,11 @@
     <meta name="author" content="">
 
     <!-- LOAD CSS FILES -->
-    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link href="<?= base_url() ?>css/main.css" rel="stylesheet" type="text/css">
 
     <!-- css files for current page only -->
-    <link href='css/fullcalendar.css' rel='stylesheet' />
-    <link href='css/fullcalendar.print.css' rel='stylesheet' media='print' />
+    <link href='<?= base_url() ?>css/fullcalendar.css' rel='stylesheet' />
+    <link href='<?= base_url() ?>css/fullcalendar.print.css' rel='stylesheet' media='print' />
 </head>
 
 <body>
@@ -30,9 +30,9 @@
                         <!-- logo begin -->
                         <div id="logo">
                             <div class="inner">
-                                <a href="index-2.html">
-                                    <img src="img/logo.png" alt="" class="logo-1">
-                                    <img src="img/logo-2.png" alt="" class="logo-2">
+                                <a href="index-2">
+                                    <img src="<?= base_url() ?>img/logo.png" alt="" class="logo-1">
+                                    <img src="<?= base_url() ?>img/logo-2.png" alt="" class="logo-2">
                                 </a>
 
                             </div>
@@ -46,31 +46,31 @@
                         <!-- mainmenu begin -->
                         <div id="mainmenu-container">
                             <ul id="mainmenu">
-                                <li><a href="index.html">Home</a>
+                                <li><a href="index">Home</a>
                                     <ul>
                                       
                                     </ul>
                                 </li>
-                                <li><a href="events.html">Events</a>
+                                <li><a href="events">Events</a>
                                     <ul>   
-                                      <li><a href="events-calendar.html">Events Calendar</a></li>   
+                                      <li><a href="events-calendar">Events Calendar</a></li>   
                                     </ul>
                                 </li>
-                                <li><a href="sermons.html">Sermons</a>
+                                <li><a href="sermons">Sermons</a>
                                     <ul>
-                                        <li><a href="sermons.html">Sermons List</a></li>
+                                        <li><a href="sermons">Sermons List</a></li>
                                         
                                     </ul>
                                 </li>
-                                <!--<li><a href="features.html">Features</a></li>-->
-                                <li><a href="news.html">News</a>
+                                <!--<li><a href="features">Features</a></li>-->
+                                <li><a href="news">News</a>
                                     <ul>
                                      
                                         
                                     </ul>
                                 </li>
-                                <li><a href="gallery.html">Gallery</a></li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="gallery">Gallery</a></li>
+                                <li><a href="contact">Contact</a></li>
                             </ul>
                         </div>
                         <!-- mainmenu close -->
@@ -115,7 +115,7 @@
                     <div class="col-md-6 event-item">
                         <div class="inner">
                             <div class="left-col">
-                                <img src="img/events/pic%20(1).jpg" alt="">
+                                <img src="<?= base_url() ?>img/events/pic%20(1).jpg" alt="">
                             </div>
                             <div class="right-col">
                                 <span class="date">06</span>
@@ -137,7 +137,7 @@
                     <div class="col-md-6 event-item">
                         <div class="inner">
                             <div class="left-col">
-                                <img src="img/events/pic%20(2).jpg" alt="">
+                                <img src="<?= base_url() ?>img/events/pic%20(2).jpg" alt="">
                             </div>
                             <div class="right-col">
                                 <span class="date">10</span>
@@ -159,7 +159,7 @@
                     <div class="col-md-6 event-item">
                         <div class="inner">
                             <div class="left-col">
-                                <img src="img/events/pic%20(3).jpg" alt="">
+                                <img src="<?= base_url() ?>img/events/pic%20(3).jpg" alt="">
                             </div>
                             <div class="right-col">
                                 <span class="date">20</span>
@@ -181,7 +181,7 @@
                     <div class="col-md-6 event-item">
                         <div class="inner">
                             <div class="left-col">
-                                <img src="img/events/pic%20(4).jpg" alt="">
+                                <img src="<?= base_url() ?>img/events/pic%20(4).jpg" alt="">
                             </div>
                             <div class="right-col">
                                 <span class="date">26</span>
@@ -203,7 +203,7 @@
                     <div class="col-md-6 event-item">
                         <div class="inner">
                             <div class="left-col">
-                                <img src="img/events/pic%20(5).jpg" alt="">
+                                <img src="<?= base_url() ?>img/events/pic%20(5).jpg" alt="">
                             </div>
                             <div class="right-col">
                                 <span class="date">01</span>
@@ -226,7 +226,7 @@
                     <div class="col-md-6 event-item">
                         <div class="inner">
                             <div class="left-col">
-                                <img src="img/events/pic%20(6).jpg" alt="">
+                                <img src="<?= base_url() ?>img/events/pic%20(6).jpg" alt="">
                             </div>
                             <div class="right-col">
                                 <span class="date">08</span>
@@ -279,30 +279,30 @@
     </div>
 
     <!-- LOAD JS FILES -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.isotope.min.js"></script>
-    <script src="js/jquery.prettyPhoto.js"></script>
-    <script src="js/easing.js"></script>
-    <script src="js/jquery.ui.totop.js"></script>
-    <script src="js/selectnav.js"></script>
-    <script src="js/ender.js"></script>
-    <script src="js/responsiveslides.min.js"></script>
-    <script src="js/owl.carousel.js"></script>
-    <script src="js/jquery.fitvids.js"></script>
-    <script src="js/jquery.plugin.js"></script>
-    <script src="js/jquery.countdown.js"></script>
-    <script src="js/countdown-custom.js"></script>
-    <script src="js/moment.min.js"></script>
-    <script src="js/fullcalendar.min.js"></script>
-    <script src="js/fullcalendar-settings.js"></script>
-    <script src="js/wow.min.js"></script>   
-    <script src="js/custom.js"></script>
+    <script src="<?= base_url() ?>js/jquery.min.js"></script>
+    <script src="<?= base_url() ?>js/bootstrap.min.js"></script>
+    <script src="<?= base_url() ?>js/jquery.isotope.min.js"></script>
+    <script src="<?= base_url() ?>js/jquery.prettyPhoto.js"></script>
+    <script src="<?= base_url() ?>js/easing.js"></script>
+    <script src="<?= base_url() ?>js/jquery.ui.totop.js"></script>
+    <script src="<?= base_url() ?>js/selectnav.js"></script>
+    <script src="<?= base_url() ?>js/ender.js"></script>
+    <script src="<?= base_url() ?>js/responsiveslides.min.js"></script>
+    <script src="<?= base_url() ?>js/owl.carousel.js"></script>
+    <script src="<?= base_url() ?>js/jquery.fitvids.js"></script>
+    <script src="<?= base_url() ?>js/jquery.plugin.js"></script>
+    <script src="<?= base_url() ?>js/jquery.countdown.js"></script>
+    <script src="<?= base_url() ?>js/countdown-custom.js"></script>
+    <script src="<?= base_url() ?>js/moment.min.js"></script>
+    <script src="<?= base_url() ?>js/fullcalendar.min.js"></script>
+    <script src="<?= base_url() ?>js/fullcalendar-settings.js"></script>
+    <script src="<?= base_url() ?>js/wow.min.js"></script>   
+    <script src="<?= base_url() ?>js/custom.js"></script>
 
     <!-- SLIDER REVOLUTION SCRIPTS  -->
-    <script type="text/javascript" src="rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
-    <script type="text/javascript" src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
-    <script src="js/rev-setting-1.html"></script>
+    <script type="text/javascript" src="<?= base_url() ?>rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+    <script type="text/javascript" src="<?= base_url() ?>rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="<?= base_url() ?>js/rev-setting-1.html"></script>
 
 </body>
 

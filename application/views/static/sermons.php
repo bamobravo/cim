@@ -40,15 +40,15 @@
                         <!-- mainmenu begin -->
                         <div id="mainmenu-container">
                             <ul id="mainmenu">
-                                <li><a href="index.html">Home</a>
+                                <li><a href="index">Home</a>
                                     <ul>
                                        
                                     </ul>
                                 </li>
                                 <li><a href="events.html">Events</a>
                                     <ul>
-                                        <li><a href="events.html">Events List</a></li>
-                                        <li><a href="events-calendar.html">Events Calendar</a></li>
+                                        <li><a href="events">Events List</a></li>
+                                        <li><a href="events-calendar">Events Calendar</a></li>
                                        
                                     </ul>
                                 </li>

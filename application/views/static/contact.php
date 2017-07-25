@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from www.satriathemes.com/blessing/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 16 Jul 2017 10:28:54 GMT -->
+<!-- Mirrored from www.satriathemes.com/blessing/contact by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 16 Jul 2017 10:28:54 GMT -->
 <head>
     <meta charset="utf-8">
     <title>Blessing</title>
@@ -10,7 +10,7 @@
     <meta name="author" content="">
 
     <!-- LOAD CSS FILES -->
-    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link href="<?= base_url() ?>css/main.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -24,9 +24,9 @@
                         <!-- logo begin -->
                         <div id="logo">
                             <div class="inner">
-                                <a href="index-2.html">
-                                    <img src="img/logo.png" alt="" class="logo-1">
-                                    <img src="img/logo-2.png" alt="" class="logo-2">
+                                <a href="index-2">
+                                    <img src="<?= base_url() ?>img/logo.png" alt="" class="logo-1">
+                                    <img src="<?= base_url() ?>img/logo-2.png" alt="" class="logo-2">
                                 </a>
 
                             </div>
@@ -38,24 +38,24 @@
                         <!-- mainmenu begin -->
                         <div id="mainmenu-container">
                             <ul id="mainmenu">
-                                <li><a href="index-2.html">Home</a>
+                                <li><a href="index-2">Home</a>
                                     <ul>
-                                        <li><a href="index-2.html">Homepage 1</a></li>
-                                        <li><a href="index-3.html">Homepage 2</a></li>
-                                        <li><a href="index-4.html">Homepage 3</a></li>
+                                        <li><a href="index-2">Homepage 1</a></li>
+                                        <li><a href="index-3">Homepage 2</a></li>
+                                        <li><a href="index-4">Homepage 3</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="#">Events</a>
                                     <ul>
-                                        <li><a href="events.html">List Type</a></li>
-                                        <li><a href="events-calendar.html">Calendar Type</a></li>
+                                        <li><a href="events">List Type</a></li>
+                                        <li><a href="events-calendar">Calendar Type</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="sermons.html">Sermons</a></li>
-                                <li><a href="features.html">Features</a></li>
-                                <li><a href="news.html">News</a></li>
-                                <li><a href="gallery.html">Gallery</a></li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="sermons">Sermons</a></li>
+                                <li><a href="features">Features</a></li>
+                                <li><a href="news">News</a></li>
+                                <li><a href="gallery">Gallery</a></li>
+                                <li><a href="contact">Contact</a></li>
                             </ul>
                         </div>
 
@@ -190,33 +190,9 @@
         <!-- footer close -->
     </div>
 
-    <!-- LOAD JS FILES -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.isotope.min.js"></script>
-    <script src="js/jquery.prettyPhoto.js"></script>
-    <script src="js/easing.js"></script>
-    <script src="js/jquery.ui.totop.js"></script>
-    <script src="js/selectnav.js"></script>
-    <script src="js/ender.js"></script>
-    <script src="js/responsiveslides.min.js"></script>
-    <script src="js/owl.carousel.js"></script>
-    <script src="js/jquery.fitvids.js"></script>
-    <script src="js/jquery.plugin.js"></script>
-    <script src="js/jquery.countdown.js"></script>
-    <script src="js/countdown-custom.js"></script>
-    <script src="js/contact.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-    <script src="js/map.js"></script>
-    <script src="js/wow.min.js"></script>	
-    <script src="js/custom.js"></script>
-
-    <!-- SLIDER REVOLUTION SCRIPTS  -->
-    <script type="text/javascript" src="rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
-    <script type="text/javascript" src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
-    <script src="js/rev-setting-1.html"></script>
+<?php include_once 'resources.php' ?>
 
 </body>
 
-<!-- Mirrored from www.satriathemes.com/blessing/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 16 Jul 2017 10:28:55 GMT -->
+<!-- Mirrored from www.satriathemes.com/blessing/contact by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 16 Jul 2017 10:28:55 GMT -->
 </html>

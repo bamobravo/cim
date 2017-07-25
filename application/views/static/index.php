@@ -95,7 +95,7 @@
                     <ul>
                         <li data-transition="fade" data-slotamount="10" data-masterspeed="1500">
                             <!--  BACKGROUND IMAGE -->
-                            <img src="img-rev-slider/bg-1.jpg" alt="">
+                            <img src="<?=base_url() ?>img-rev-slider/bg-1.jpg" alt="">
                             <div class="tp-caption border-v lft"
                                 data-x="540"
                                 data-y="center"
@@ -146,7 +146,7 @@
 
                         <li data-transition="fade" data-slotamount="10" data-masterspeed="1500">
                             <!--  BACKGROUND IMAGE -->
-                            <img src="img-rev-slider/bg-2.jpg" alt="">
+                            <img src="<?=base_url() ?>img-rev-slider/bg-2.jpg" alt="">
                             <div class="tp-caption custom-font-1 lft"
                                 data-x="left"
                                 data-y="140"
@@ -188,7 +188,7 @@
 
                         <li data-transition="fade" data-slotamount="10" data-masterspeed="1500">
                             <!--  BACKGROUND IMAGE -->
-                            <img src="img-rev-slider/bg-3.jpg" alt="">
+                            <img src="<?=base_url() ?>img-rev-slider/bg-3.jpg" alt="">
                             <div class="tp-caption border-v lft"
                                 data-x="540"
                                 data-y="center"
@@ -269,7 +269,7 @@
                                     <span class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
                                     </span>
                                 </div>
-                                <img src="img/events/pic%20(1).jpg" alt="">
+                                <img src="<?=base_url() ?>img/events/pic%20(1).jpg" alt="">
                             </div>
 
                             <div class="item">
@@ -281,7 +281,7 @@
                                     <span class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
                                     </span>
                                 </div>
-                                <img src="img/events/pic%20(2).jpg" alt="">
+                                <img src="<?=base_url() ?>img/events/pic%20(2).jpg" alt="">
                             </div>
 
                             <div class="item">
@@ -293,7 +293,7 @@
                                     <span class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
                                     </span>
                                 </div>
-                                <img src="img/events/pic%20(3).jpg" alt="">
+                                <img src="<?=base_url() ?>img/events/pic%20(3).jpg" alt="">
                             </div>
 
                             <div class="item">
@@ -305,7 +305,7 @@
                                     <span class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
                                     </span>
                                 </div>
-                                <img src="img/events/pic%20(4).jpg" alt="">
+                                <img src="<?=base_url() ?>img/events/pic%20(4).jpg" alt="">
                             </div>
 
                             <div class="item">
@@ -317,7 +317,7 @@
                                     <span class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
                                     </span>
                                 </div>
-                                <img src="img/events/pic%20(5).jpg" alt="">
+                                <img src="<?=base_url() ?>img/events/pic%20(5).jpg" alt="">
                             </div>
 
                             <div class="item">
@@ -329,7 +329,7 @@
                                     <span class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
                                     </span>
                                 </div>
-                                <img src="img/events/pic%20(6).jpg" alt="">
+                                <img src="<?=base_url() ?>img/events/pic%20(6).jpg" alt="">
                             </div>
 
                         </div>
@@ -367,7 +367,7 @@
                         </div>
 
                         <div class="col-md-4 wow fadeInRight" data-wow-delay=".5s">
-                            <img src="img/misc/pic-1.jpg" class="img-responsive" alt="">
+                            <img src="<?=base_url() ?>img/misc/pic-1.jpg" class="img-responsive" alt="">
                             <h3>Our Vision</h3>
                            A Church that leads peole from there current reality to their ultimate inheritance in cooperation with the holy spirit through a mental shift resulting in a Godly Success and their best selves.
 
@@ -377,7 +377,7 @@
                            <!-- <a href="#" class="st-btn">Read More</a>-->
                         </div>
                         <div class="col-md-4 wow fadeInRight" data-wow-delay=".75s">
-                            <img src="img/misc/pic-2.jpg" class="img-responsive" alt="">
+                            <img src="<?=base_url() ?>img/misc/pic-2.jpg" class="img-responsive" alt="">
                             <h3>Church Mission</h3>
                             CIM mission is to raise and equip an army of believers to be Leaders in their purpose, who are positively living an Outstanding Value Added life in the society and expanding God's Kingdom on Earth.
 							<br>
@@ -385,7 +385,7 @@
                            <!-- <a href="#" class="st-btn">Read More</a>-->
                         </div>
                         <div class="col-md-4 wow fadeInRight" data-wow-delay="1s">
-                            <img src="img/misc/pic-3.jpg" class="img-responsive" alt="">
+                            <img src="<?=base_url() ?>img/misc/pic-3.jpg" class="img-responsive" alt="">
                             <h3>Our Motto</h3>
                             A change of Heart... Change on Earth... Heaven at last.
 							<br>
@@ -409,7 +409,7 @@
                         <div class="col-md-10 col-md-offset-1">
                             <div class="custom-col-3 wow flipInX">
                                 <div class="left-col">
-                                    <img src="img/sermons/pic%20(1).jpg" alt="" class="img-responsive">
+                                    <img src="<?=base_url() ?>img/sermons/pic%20(1).jpg" alt="" class="img-responsive">
                                 </div>
                                 <div class="mid-col">
                                     <a href="#">
@@ -426,7 +426,7 @@
 
                             <div class="custom-col-3 wow flipInX">
                                 <div class="left-col">
-                                    <img src="img/sermons/pic%20(2).jpg" alt="" class="img-responsive">
+                                    <img src="<?=base_url() ?>img/sermons/pic%20(2).jpg" alt="" class="img-responsive">
                                 </div>
                                 <div class="mid-col">
                                     <a href="#">
@@ -444,7 +444,7 @@
 
                             <div class="custom-col-3 wow flipInX">
                                 <div class="left-col">
-                                    <img src="img/sermons/pic%20(3).jpg" alt="" class="img-responsive">
+                                    <img src="<?=base_url() ?>img/sermons/pic%20(3).jpg" alt="" class="img-responsive">
                                 </div>
                                 <div class="mid-col">
                                     <a href="#">
@@ -482,13 +482,13 @@
                             </p>
 
                             <p class="wow fadeIn" data-wow-delay='1.5s'>
-                                <img src="img/misc/pic-5.png" alt="">
+                                <img src="<?=base_url() ?>img/misc/pic-5.png" alt="">
                             </p>
 
                         </div>
 
                         <div class="col-md-6 wow fadeInUp">
-                            <img src="img/misc/pic-4.png" class="img-responsive" alt="">
+                            <img src="<?=base_url() ?>img/misc/pic-4.png" class="img-responsive" alt="">
                         </div>
                     </div>
                 </div>
@@ -581,28 +581,28 @@
 
                         <div id="gallery-isotope" class="col-md-12 wow fadeInUp" data-wow-delay=".25s">
                             <div class="item long-pic">
-                                <a href="img/gallery/pic%20(1).jpg" data-gal="prettyPhoto[galllery]"><span class="overlay"></span></a>
-                                <img src="img/gallery/pic%20(1).jpg" alt="">
+                                <a href="<?=base_url() ?>img/gallery/pic%20(1).jpg" data-gal="prettyPhoto[galllery]"><span class="overlay"></span></a>
+                                <img src="<?=base_url() ?>img/gallery/pic%20(1).jpg" alt="">
                             </div>
 
                             <div class="item small-pic">
-                                <a href="img/gallery/pic%20(2).jpg" data-gal="prettyPhoto[galllery]"><span class="overlay"></span></a>
-                                <img src="img/gallery/pic%20(2).jpg" alt="">
+                                <a href="<?=base_url() ?>img/gallery/pic%20(2).jpg" data-gal="prettyPhoto[galllery]"><span class="overlay"></span></a>
+                                <img src="<?=base_url() ?>img/gallery/pic%20(2).jpg" alt="">
                             </div>
 
                             <div class="item wide-pic">
-                                <a href="img/gallery/pic%20(3).jpg" data-gal="prettyPhoto[galllery]"><span class="overlay"></span></a>
-                                <img src="img/gallery/pic%20(3).jpg" alt="">
+                                <a href="<?=base_url() ?>img/gallery/pic%20(3).jpg" data-gal="prettyPhoto[galllery]"><span class="overlay"></span></a>
+                                <img src="<?=base_url() ?>img/gallery/pic%20(3).jpg" alt="">
                             </div>
 
                             <div class="item wide-pic">
-                                <a href="img/gallery/pic%20(4).jpg" data-gal="prettyPhoto[galllery]"><span class="overlay"></span></a>
-                                <img src="img/gallery/pic%20(4).jpg" alt="">
+                                <a href="<?=base_url() ?>img/gallery/pic%20(4).jpg" data-gal="prettyPhoto[galllery]"><span class="overlay"></span></a>
+                                <img src="<?=base_url() ?>img/gallery/pic%20(4).jpg" alt="">
                             </div>
 
                             <div class="item small-pic">
-                                <a href="img/gallery/pic%20(5).jpg" data-gal="prettyPhoto[galllery]"><span class="overlay"></span></a>
-                                <img src="img/gallery/pic%20(5).jpg" alt="">
+                                <a href="<?=base_url() ?>img/gallery/pic%20(5).jpg" data-gal="prettyPhoto[galllery]"><span class="overlay"></span></a>
+                                <img src="<?=base_url() ?>img/gallery/pic%20(5).jpg" alt="">
                             </div>
 
 
@@ -619,17 +619,17 @@
                         <div class="col-md-8 col-md-offset-2">
                             <div id="testi-carousel" class="testi-slider text-center wow fadeInUp">
                                 <div class="item">
-                                    <img src="img/testi/pic%20(1).jpg" alt="" class="img-circle">
+                                    <img src="<?=base_url() ?>img/testi/pic%20(1).jpg" alt="" class="img-circle">
                                     <blockquote>Blessing theme has a real desire and heart for ministry within the local church</blockquote>
                                     <span class="testi-by">Aline Drummond</span>
                                 </div>
                                 <div class="item">
-                                    <img src="img/testi/pic%20(2).jpg" alt="" class="img-circle">
+                                    <img src="<?=base_url() ?>img/testi/pic%20(2).jpg" alt="" class="img-circle">
                                     <blockquote>I Just wanted to let you know how pleased we are and how great the Blessing theme is working for our National Church </blockquote>
                                     <span class="testi-by">Mortimer Elmo</span>
                                 </div>
                                 <div class="item">
-                                    <img src="img/testi/pic%20(3).jpg" alt="" class="img-circle">
+                                    <img src="<?=base_url() ?>img/testi/pic%20(3).jpg" alt="" class="img-circle">
                                     <blockquote>
                                         Get in touch with Blessing theme today and get ready to see your church grow!
 
@@ -668,28 +668,7 @@
         </footer>
         <!-- footer close -->
     </div>
-
-    <!-- LOAD JS FILES -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.isotope.min.js"></script>
-    <script src="js/jquery.prettyPhoto.js"></script>
-    <script src="js/easing.js"></script>
-    <script src="js/jquery.ui.totop.js"></script>
-    <script src="js/ender.js"></script>
-    <script src="js/responsiveslides.min.js"></script>
-    <script src="js/owl.carousel.js"></script>
-    <script src="js/jquery.fitvids.js"></script>
-    <script src="js/jquery.plugin.js"></script>
-    <script src="js/jquery.countdown.js"></script>
-    <script src="js/countdown-custom.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/custom.js"></script>
-
-    <!-- SLIDER REVOLUTION SCRIPTS  -->
-    <script type="text/javascript" src="rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
-    <script type="text/javascript" src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
-    <script src="js/rev-setting-1.html"></script>
+<?php include_once 'includes/resource.php' ?>
 
 </body>
 
