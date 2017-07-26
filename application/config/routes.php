@@ -51,4 +51,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['default_controller'] = 'St';
 $route['404_override'] = '';
+$route['mc/(:any)/(:any)']='form/$1/$2';
+$route['mc/(:any)/(:any)/(:any)']='form/$1/$2/$3';
 $route['translate_uri_dashes'] = FALSE;
