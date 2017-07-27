@@ -8,6 +8,7 @@ class St extends CI_Controller {
 		parent::__construct();
 		$this->load->helper('url');
 		$this->load->database();
+		$this->load->library('session');
 	}
 	public function index()
 	{
@@ -23,16 +24,19 @@ class St extends CI_Controller {
 		}
 		$this->load->view('static/'.$page);
 	}
+
 	public function login()
 	{
-		print_r($_POST);exit;
 		if (isset($_POST['btn'])) {
 			$username = $_POST['username'];
 			$password = $_POST['password'];
 			if ($password && $username) {
-				if ($this->validateUser($username,$password)) {
+				$user=$this->validateUser($username,$password);
+				if ($user) {
 					$resp['status']=true;
-					$resp['message']='authentication successful';
+					$resp['message']=base_url('adm');
+					$this->session->set_userdata('uid',$user[0]['id']);
+					$this->session->set_userdata('logged',true);
 					echo json_encode($resp);
 				}
 				else{
@@ -47,10 +51,14 @@ class St extends CI_Controller {
 			}
 		}
 	}
+	public function signin()
+	{
+		$this->load->view('login');
+	}
 	private function validateUser($username,$password)
 	{
 		$query = "select * from user where username=? and password=?";
 		$result = $this->db->query($query,array($username,md5($password)));
-		return $result->result_row();
+		return $result->result_array();
 	}
 }
