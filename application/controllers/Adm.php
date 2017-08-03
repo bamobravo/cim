@@ -12,15 +12,16 @@ class Adm extends CI_Controller
 		$this->load->helper('url');
 		$this->load->library('session');
 		if ($this->session->userdata('logged')==false || $this->session->userdata('uid')==false) {
-			$resp['status']=false;
-			$resp['redirect']='st/signin';
-			echo json_encode($resp);
+			header("Location:".base_url('st/signin'));
 		}
 	}
-
-	public function v($page)
+//this is going to be used for the api and the api alone
+	public function v($page=false)
 	{
-		if (!file_exists('application/views/'.$page.'.php')) {
+		if (!isset($_POST['btn'])) {
+			show_404();
+		}
+		if (empty($page) || !file_exists('application/views/'.$page.'.php')) {
 			show_404();
 		}
 		$data = method_exists($this, $page.'Data');

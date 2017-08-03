@@ -1,0 +1,101 @@
+body,html{
+	margin: 0;
+	padding: 0;
+	min-height: 100%;
+	position: relative;
+}
+.header{
+	height: 70px;
+	border-bottom: 2px solid #eee;
+	margin-bottom: 0;
+	margin-top: auto;
+}
+.page-header{
+	margin: 0;
+	padding: 2px;
+}
+.footer{
+	border-top: 2px solid #eee;
+	height: 50px;
+}
+.no-float{
+	float: none!important;
+}
+.login-form{
+	width: 400px;
+	min-width: 250px;
+	margin-bottom: 30px;
+	padding: 40px 20px 40px 20px;
+	margin-right: auto;
+	margin-left: auto;
+	border: solid 2px #ccc;
+	background-color: #efefef;
+	border-radius: 4px;
+}
+input[type=text],input[type=password]{
+	height: 40px;
+}
+.content{
+	float: right;
+	padding: 1%;
+	width: 78%;
+}
+
+.sidebar{
+	float: left;
+	min-width: 75px;
+	width: 15%;
+	height: 100%;
+	border-right: 2px solid #ddd;
+	
+	padding-top: 5%;
+	margin-top: 0px;
+}
+.sidebar-container{
+	/*background-color: #eee;*/
+	border-top: thin solid #ddd;
+	border-bottom: thin solid #ddd;
+}
+.logout-text{
+	margin-top: 35px;
+	margin-left: 15px;
+
+}
+.sidebar ul{
+	list-style: none;
+	margin-left: 0px;
+	padding-left: 0px;
+}
+.sidebar-container li{
+padding: 8px;
+border-bottom: thin #ccc solid;
+cursor: pointer;
+}
+.sidebar-container li:hover{
+	background-color: #ddd;
+}
+.container-fluid{
+	min-height: 100%;
+	min-width: 400px;
+	margin-bottom: 0;
+	padding: 0;
+}
+.page-header div{
+	display: inline-block;
+	height: 100%;
+	padding:5px;
+}
+.site-logo{
+	padding-right: 10px;
+	border-right: thin solid #aaa;
+}
+.page-title{
+	text-align: center;
+	margin-left: 15%;
+	font-weight: bold;
+	font-size: 1.6em;
+	font-family: mMenlo, Monaco, Consolas, "Courier New", monospace;
+}
+.fr{
+	float: right;
+}

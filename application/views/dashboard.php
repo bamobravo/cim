@@ -1,9 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Church Administration Page</title>
-</head>
-<body>
-building the spa dashboard here
-</body>
-</html>
+<?php include 'includes/header.php';include 'includes/sidebar.php' ?>
+
+<div class="content">
+	the content for dashboard begines here
+</div>
+<?php include 'includes/footer.php' ?>
