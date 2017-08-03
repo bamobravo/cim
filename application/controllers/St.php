@@ -53,7 +53,8 @@ class St extends CI_Controller {
 	}
 	public function signin()
 	{
-		$this->load->view('login');
+		$data['title']='Login';
+		$this->load->view('login',$data);
 	}
 	private function validateUser($username,$password)
 	{

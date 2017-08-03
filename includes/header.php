@@ -13,9 +13,12 @@
 		<img src="<?=base_url('img/logo-2.png') ?>"  / alt="site logo" /> 
 	</div>
 	<div class="page-title">The church Name</div>
-	<div>
-		<a href="<?php echo base_url('auth/logout')?>" class='fr logout-text'></a>
-	</div>
+	<?php if ($this->session->userdata('logged')): ?>
+		<div class=' logout-text fr'>
+			<a href="<?php echo base_url('auth/logout')?>" >logout</a>
+		</div>
+	<?php endif ?>
+
 		<div class="clearfix"></div>
 	</div>
 	<div class="clearfix"></div>

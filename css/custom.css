@@ -1,8 +1,13 @@
-body,html{
+html{
 	margin: 0;
 	padding: 0;
-	min-height: 100%;
-	position: relative;
+	min-height: 100%!important;
+	/*position: relative;*/
+}
+body{
+min-height: 100%;
+position: absolute;
+width: 100%;
 }
 .header{
 	height: 70px;
@@ -17,6 +22,7 @@ body,html{
 .footer{
 	border-top: 2px solid #eee;
 	height: 50px;
+	padding: 5px;
 }
 .no-float{
 	float: none!important;
@@ -31,6 +37,7 @@ body,html{
 	border: solid 2px #ccc;
 	background-color: #efefef;
 	border-radius: 4px;
+	margin-top: 10%;
 }
 input[type=text],input[type=password]{
 	height: 40px;
@@ -57,9 +64,9 @@ input[type=text],input[type=password]{
 	border-bottom: thin solid #ddd;
 }
 .logout-text{
-	margin-top: 35px;
-	margin-left: 15px;
-
+	margin-top: 18px;
+	margin-right: 15px;
+	font-size: 1.2em;
 }
 .sidebar ul{
 	list-style: none;
@@ -79,11 +86,21 @@ cursor: pointer;
 	min-width: 400px;
 	margin-bottom: 0;
 	padding: 0;
+	position: absolute;
+	width: 100%;
+	height: auto;
+	width: auto;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+
 }
 .page-header div{
 	display: inline-block;
 	height: 100%;
 	padding:5px;
+	position: relative;
 }
 .site-logo{
 	padding-right: 10px;
@@ -94,7 +111,7 @@ cursor: pointer;
 	margin-left: 15%;
 	font-weight: bold;
 	font-size: 1.6em;
-	font-family: mMenlo, Monaco, Consolas, "Courier New", monospace;
+	/*font-family: mMenlo, Monaco, Consolas, "Courier New", monospace;*/
 }
 .fr{
 	float: right;

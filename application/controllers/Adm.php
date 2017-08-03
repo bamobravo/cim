@@ -35,6 +35,7 @@ class Adm extends CI_Controller
 	private function getDashboardInfo()
 	{
 		$result = array();
+		$result['title']='Church Information';
 		return $result;
 	}
 }
