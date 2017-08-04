@@ -14,18 +14,39 @@ class Adm extends CI_Controller
 		if ($this->session->userdata('logged')==false || $this->session->userdata('uid')==false) {
 			header("Location:".base_url('st/signin'));
 		}
+		$this->load->model('Form_builder');
+		$this->load->model('Table_generator');
 	}
 //this is going to be used for the api and the api alone
-	public function v($page=false)
+	public function v($page)
 	{
-		if (!isset($_POST['btn'])) {
-			show_404();
+		if (!$this->modelExists($page)) {
+			show_404();exit;
 		}
-		if (empty($page) || !file_exists('application/views/'.$page.'.php')) {
-			show_404();
+		$data['title']=ucfirst($page).' Information';
+		$data['model']=$page;
+		$exception=array();
+		$method = $page.'Data';
+		if(method_exists($this, $method)){
+			$data = array_merge($data,$this->$method());
 		}
-		$data = method_exists($this, $page.'Data');
-		$this->load->view($page,$data);
+		$this->load->view('insert',$data);
+	}
+	private function query($query,$data=array()){
+		$this->load->database();
+		$result = $this->db->query($query,$data);
+		return $result->result_array();
+	}
+	private function modelExists($model)
+	{
+		$query = "show tables";
+		$result = $this->query($query);
+		foreach ($result as $value) {
+			if ($value['Tables_in_cim']==$model) {
+				return true;
+			}
+		}
+		return false;
 	}
 	public function index()
 	{

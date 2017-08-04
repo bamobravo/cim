@@ -13,7 +13,7 @@ static $uniqueArray=array();
 /*this is an associative array containing the fieldname and the type of the field*/
 static $typeArray = array('name'=>'varchar','start_date'=>'datetime','end_date'=>'datetime','description'=>'text','host'=>'varchar','comment'=>'text','unit'=>'int');  
 /*this is a dictionary that map a field name with the label name that will be shown in a form*/
-static $labelArray=array('id'=>'','name'=>'','start_date'=>'','end_date'=>'','description'=>'','host'=>'','comment'=>'','unit'=>''); 
+static $labelArray=array('ID'=>'','name'=>'','start_date'=>'','end_date'=>'','description'=>'','host'=>'','comment'=>'','unit'=>''); 
 /*associative array of fields that have default value*/
 static $defaultArray = array();
 //populate this array with fields that are meant to be displayed as document in the format array('fieldname'=>array('filetype','maxsize',foldertosave','preservefilename'))

@@ -13,7 +13,7 @@ static $uniqueArray=array();
 /*this is an associative array containing the fieldname and the type of the field*/
 static $typeArray = array('image_path'=>'varchar','uploaded_date'=>'timestamp','status'=>'tinyint');  
 /*this is a dictionary that map a field name with the label name that will be shown in a form*/
-static $labelArray=array('id'=>'','image_path'=>'','uploaded_date'=>'','status'=>''); 
+static $labelArray=array('ID'=>'','image_path'=>'','uploaded_date'=>'','status'=>''); 
 /*associative array of fields that have default value*/
 static $defaultArray = array('uploaded_date'=>'CURRENT_TIMESTAMP','status'=>'1');
 //populate this array with fields that are meant to be displayed as document in the format array('fieldname'=>array('filetype','maxsize',foldertosave','preservefilename'))
