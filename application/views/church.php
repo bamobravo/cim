@@ -13,7 +13,7 @@ $capitalize = ucfirst($model);
       ->appendSubmitButton('Save ', 'btn-success')->build(); 
  ?>
 <div class="">
-	<h3 class="underline-block"> Update <?php echo $model ?> Information</h3>
+	<h3 class="underline-block">General Church Information </h3>
 	<?php echo $form ?>
 </div>
 

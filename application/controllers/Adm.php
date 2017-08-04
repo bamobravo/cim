@@ -17,7 +17,6 @@ class Adm extends CI_Controller
 		$this->load->model('Form_builder');
 		$this->load->model('Table_generator');
 	}
-//this is going to be used for the api and the api alone
 	public function v($page)
 	{
 		if (!$this->modelExists($page)) {
@@ -59,5 +58,37 @@ class Adm extends CI_Controller
 		$result['title']='Church Information';
 		return $result;
 	}
+	public function edit($model,$id=false)
+	{
+		if ($id===false) {
+			if ($model=='church') {
+				$id=$this->getChurch();
+				if ($id==false) {
+					$this->showChurchInfo();return;
+				}
+			}
+			else{
+				show_404();exit;
+			}
+		}
+		$data['model']=$model;
+		$data['id']=$id;
+		$this->load->view('update',$data);
+	}
+private function showChurchInfo($value='')
+{
+	$data['model']='church';
+	$data['title']='Church Information';
+	$this->load->view('church',$data);
+}
+private function getChurch()
+{
+	$query ="select id from church order by id";
+	$result = $this->query($query);
+	if ($result ==false) {
+		return false;
+	}
+	return $result[0];
+}
 }
  ?>

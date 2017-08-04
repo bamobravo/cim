@@ -15,7 +15,7 @@
 	<div class="page-title">The church Name</div>
 	<?php if ($this->session->userdata('logged')): ?>
 		<div class=' logout-text fr'>
-			<a href="<?php echo base_url('auth/logout')?>" >logout</a>
+			<a href="<?php echo base_url('st/logout')?>" >logout</a>
 		</div>
 	<?php endif ?>
 

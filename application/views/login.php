@@ -22,7 +22,6 @@
 		width: auto!important;
 	}
 </style>
-<?php include 'includes/footer.php' ?>
 <script type="text/javascript" src='<?=base_url() ?>js/jquery.min.js' ></script>
 <script type="text/javascript">
 	$(document).ready(function($) {
@@ -42,3 +41,6 @@
 		});
 	});
 </script>
+</div>
+</body>
+</html>

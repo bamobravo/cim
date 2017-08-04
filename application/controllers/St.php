@@ -35,7 +35,7 @@ class St extends CI_Controller {
 				if ($user) {
 					$resp['status']=true;
 					$resp['message']=base_url('adm');
-					$this->session->set_userdata('uid',$user[0]['id']);
+					$this->session->set_userdata('uid',$user[0]['ID']);
 					$this->session->set_userdata('logged',true);
 					echo json_encode($resp);
 				}
@@ -61,5 +61,17 @@ class St extends CI_Controller {
 		$query = "select * from user where username=? and password=?";
 		$result = $this->db->query($query,array($username,md5($password)));
 		return $result->result_array();
+	}
+	public function logout()
+	{
+		$this->session->sess_destroy();
+		header("Location:".base_url('st/signin'));
+	}
+	public function edit($model,$id='')
+	{
+		echo "got here";exit;
+		$data['model']=$model;
+		$data['id']=$id;
+		$this->load->view('update');
 	}
 }
