@@ -152,7 +152,7 @@ class Table_generator extends CI_Model
 		
 			if (!empty($documentArray) && in_array($key, $documentArray)) {
 				$link = base_url($value);
-				$value = "<a href='$link' >Download</a>";
+				$value = "<img src='$link' alt='not available' width='70' height='70'>";
 			}
 			if ($model::$typeArray[$key]=='tinyint') {
 				if ($key == 'status') {

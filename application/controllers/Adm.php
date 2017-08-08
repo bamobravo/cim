@@ -63,7 +63,7 @@ class Adm extends CI_Controller
 		if ($id===false) {
 			if ($model=='church') {
 				$id=$this->getChurch();
-				if ($id==false) {
+				if ($id===false) {
 					$this->showChurchInfo();return;
 				}
 			}
@@ -71,6 +71,7 @@ class Adm extends CI_Controller
 				show_404();exit;
 			}
 		}
+		$data['title']=$model.' Information';
 		$data['model']=$model;
 		$data['id']=$id;
 		$this->load->view('update',$data);
@@ -88,7 +89,7 @@ private function getChurch()
 	if ($result ==false) {
 		return false;
 	}
-	return $result[0];
+	return $result[0]['id'];
 }
 }
  ?>

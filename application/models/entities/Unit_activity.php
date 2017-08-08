@@ -13,7 +13,7 @@ static $uniqueArray=array();
 /*this is an associative array containing the fieldname and the type of the field*/
 static $typeArray = array('activity'=>'varchar','week_day'=>'varchar');  
 /*this is a dictionary that map a field name with the label name that will be shown in a form*/
-static $labelArray=array('id'=>'','activity'=>'','week_day'=>''); 
+static $labelArray=array('ID'=>'','activity'=>'','week_day'=>''); 
 /*associative array of fields that have default value*/
 static $defaultArray = array();
 //populate this array with fields that are meant to be displayed as document in the format array('fieldname'=>array('filetype','maxsize',foldertosave','preservefilename'))

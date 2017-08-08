@@ -12,9 +12,7 @@ class St extends CI_Controller {
 	}
 	public function index()
 	{
-		// echo "got here";exit;
-		// $this->load->view('static/index');
-		header("Location:v/index");exit;
+		header("Location:st/v/index");exit;
 	}
 
 	public function v($page='index')
@@ -22,9 +20,33 @@ class St extends CI_Controller {
 		if (!file_exists('application/views/static/'.$page.'.php')) {
 			show_404();
 		}
-		$this->load->view('static/'.$page);
+		$data = array();
+		$method = $page.'Data';
+		if (method_exists($this, $method)) {
+			$data=$this->$method();
+		}
+		$this->load->view('static/'.$page,$data);
 	}
 
+	private function indexData()
+	{
+		$result = $this->loadModel('church');
+		if ($result==false) {
+			$this->showError();exit;
+		}
+		return $result[0];
+	}
+	private function showError()
+	{
+		echo "error occured";
+	}
+	private function loadModel($model,$where='',$limit='',$order='')
+	{
+		$query = "select * from $model $where $order $limit";
+		$result = $this->db->query($query);
+		$result = $result->result_array();
+		return $result;
+	}
 	public function login()
 	{
 		if (isset($_POST['btn'])) {
@@ -67,11 +89,5 @@ class St extends CI_Controller {
 		$this->session->sess_destroy();
 		header("Location:".base_url('st/signin'));
 	}
-	public function edit($model,$id='')
-	{
-		echo "got here";exit;
-		$data['model']=$model;
-		$data['id']=$id;
-		$this->load->view('update');
-	}
+
 }

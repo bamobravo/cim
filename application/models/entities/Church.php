@@ -11,9 +11,9 @@ static $nullArray=array('slogan' ,'church_verse' ,'verse_location' );
 /*this array contains the fields that are unique*/
 static $uniqueArray=array(); 
 /*this is an associative array containing the fieldname and the type of the field*/
-static $typeArray = array('church_name'=>'varchar','slogan'=>'varchar','brief_description'=>'text','full_description'=>'text','location'=>'varchar','pastor'=>'varchar','church_verse'=>'varchar','verse_location'=>'varchar');  
+static $typeArray = array('church_name'=>'varchar','slogan'=>'varchar','brief_description'=>'text','full_description'=>'text','location'=>'varchar','pastor'=>'varchar','about_pastor'=>'text','church_verse'=>'varchar','verse_location'=>'varchar');  
 /*this is a dictionary that map a field name with the label name that will be shown in a form*/
-static $labelArray=array('ID'=>'','church_name'=>'','slogan'=>'','brief_description'=>'','full_description'=>'','location'=>'','pastor'=>'','church_verse'=>'','verse_location'=>''); 
+static $labelArray=array('ID'=>'','church_name'=>'','slogan'=>'','brief_description'=>'','full_description'=>'','location'=>'','pastor'=>'','about_pastor'=>'','church_verse'=>'','verse_location'=>''); 
 /*associative array of fields that have default value*/
 static $defaultArray = array();
 //populate this array with fields that are meant to be displayed as document in the format array('fieldname'=>array('filetype','maxsize',foldertosave','preservefilename'))
@@ -50,6 +50,13 @@ function getFull_descriptionFormField($value=''){
 	return "<div class='form-group'>
 	<label for='full_description' >Full Description</label>
 <textarea id='full_description' name='full_description' class='form-control' required>$value</textarea>
+</div> ";
+
+}
+function getAbout_pastorFormField($value=''){
+	return "<div class='form-group'>
+	<label for='about_pastor' >About Pastor</label>
+<textarea id='about_pastor' name='about_pastor' class='form-control' required>$value</textarea>
 </div> ";
 
 }

@@ -6,7 +6,7 @@
 		<a href="<?=base_url('adm/v/payment') ?>"><li>Payments</li></a>
 		<a href="<?=base_url('adm/v/event') ?>"><li>Events</li></a>
 		<a href="<?=base_url('adm/v/gallery') ?>"><li>Gallery</li></a>
-		<a href="<?=base_url('adm/v/unit_activity') ?>"><li>Unit Activities</li></a>
+		<a href="<?=base_url('adm/v/blog') ?>"><li>Blog</li></a>
 		<a href="<?=base_url('st/logout') ?>"><li>logout</li></a>
 	</ul>
 </div>

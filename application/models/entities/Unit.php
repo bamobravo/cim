@@ -13,14 +13,14 @@ static $uniqueArray=array('unit_name' );
 /*this is an associative array containing the fieldname and the type of the field*/
 static $typeArray = array('unit_name'=>'varchar','brief_description'=>'varchar','full_description'=>'text','joining_instruction'=>'text');  
 /*this is a dictionary that map a field name with the label name that will be shown in a form*/
-static $labelArray=array('id'=>'','unit_name'=>'','brief_description'=>'','full_description'=>'','joining_instruction'=>''); 
+static $labelArray=array('ID'=>'','unit_name'=>'','brief_description'=>'','full_description'=>'','joining_instruction'=>''); 
 /*associative array of fields that have default value*/
 static $defaultArray = array();
 //populate this array with fields that are meant to be displayed as document in the format array('fieldname'=>array('filetype','maxsize',foldertosave','preservefilename'))
 //the folder to save must represent a path from the basepath. it should be a relative path,preserve filename will be either true or false. when true,the file will be uploaded with it default filename else the system will pick the current user id in the session as the name of the file.
 static $documentField = array();//array containing an associative array of field that should be regareded as document field. it will contain the setting for max size and data type.
 		
-static $tableAction=array('enable'=>'getEnabled','delete'=>'ac/delete/unit','update'=>'vc/unit/edit');
+static $tableAction=array('enable'=>'getEnabled','delete'=>'adm/delete/unit','update'=>'adm/edit/unit','activities'=>'adm/v/unit_activity');
 function __construct($array=array())
 {
 	parent::__construct($array);

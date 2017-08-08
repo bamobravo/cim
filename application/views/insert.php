@@ -12,17 +12,15 @@
 </div>
 <?php 
 $capitalize = ucfirst($model);
-	$user = 1;//$this->Session_manager->getCurrentUserProp('cUser');
-	$hidden = array('creator'=>$user);
 	$form = $this->Form_builder->start('user_form')
-	->appendInsertForm($capitalize,true,$hidden)
+	->appendInsertForm($capitalize)
       ->addSubmitLink()
       ->appendSubmitButton('Save ', 'btn-success')->build();
       $ignore = array('password');
        $table = $this->Table_generator->getTableHtml($capitalize,$message,$ignore); 
  ?>
 <div class="">
-	<h3 class="underline-block">List of <?php echo $capitalize ?></h3>
+	<h3 class="underline-block">List of <?php echo $capitalize ?>s</h3>
 	<?php echo $table ?>
 </div>
 
@@ -31,7 +29,7 @@ $capitalize = ucfirst($model);
 <div class="popup" id="popup">
 <div class="form-container"  id="form-container" >
 <span class="close">&times;</span>
-<h3 >Add New Center</h3>
+<h3 >Add New <?php echo $model ?></h3>
 	<?=$form?>
 </div>
 </div>

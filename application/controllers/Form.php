@@ -93,7 +93,7 @@ class Form extends CI_Controller
 		$prevCount = 0;
 		$models =$this->validateModels('c',$message);//validate the models and return the model arrays on success of return false and return message
 		$desc = implode(' , ', $models);
-		$this->log($desc,"attempting to insert $desc");
+		// $this->log($desc,"attempting to insert $desc");
 		if (!$models) {
 			echo createJsonMessage('status',false,'message','an error occured while processing information','description',$message);;
 			exit;
@@ -151,7 +151,7 @@ class Form extends CI_Controller
 			$this->db->trans_rollback();
 			$message = empty($message)?'error occured while inserting record':$message;
 			echo createJsonMessage('status',false,'message',$message);
-			$this->log($desc,$message);
+			// $this->log($desc,$message);
 			return false;
 		}
 		//load the insert many method here before the db is committed so that the transaction is atomic.
@@ -160,12 +160,12 @@ class Form extends CI_Controller
 			$this->db->trans_commit();//end the transaction
 			// $result = array('status'=>)
 			echo createJsonMessage('status',true,'message','records inserted successfully','data',$parentValue);
-			$this->log($desc," $desc Inserted");
+			// $this->log($desc," $desc Inserted");
 			return true;
 		}
 		$this->db->trans_rollback();
 		echo createJsonMessage('status',false,'message','error occured while inserting records');
-		$this->log($desc," error inserting $desc");
+		// $this->log($desc," error inserting $desc");
 		return false;
 	}
 	// the models is the array of all the models inserted, type specify if it an update or an insert,
@@ -254,28 +254,28 @@ class Form extends CI_Controller
 			return $parameter;
 		}
 		foreach ($paramFile as $name => $value) {
-			$this->log($model,"uploading file $name");
+			// $this->log($model,"uploading file $name");
 			if (in_array($name, $fields)) {//if the field name is present in the fields the upload the document
 				list($type,$size,$directory) = $value;
-				$method ="get".ucfirst($model)."Directory";
-				$this->load->model('uploadDirectoryManager');
-				if (method_exists($this->uploadDirectoryManager, $method)) {
-					$dir  = $this->uploadDirectoryManager->$method($parameter);
-					if ($dir===false) {
-						showUploadErrorMessage($this->Session_manager,"Error while uploading file",false);
-					}
-					$directory.=$dir;
-				}
+				// $method ="get".ucfirst($model)."Directory";
+				// $this->load->model('uploadDirectoryManager');
+				// if (method_exists($this->uploadDirectoryManager, $method)) {
+				// 	$dir  = $this->uploadDirectoryManager->$method($parameter);
+				// 	if ($dir===false) {
+				// 		showUploadErrorMessage($this->Session_manager,"Error while uploading file",false);
+				// 	}
+				// 	$directory.=$dir;
+				// }
 				$currentUpload = $this->uploadFile($model,$name,$type,$size,$directory,$message);
 
 				if ($currentUpload==false) {
 					showUploadErrorMessage($this->Session_manager,$message,false);
 				}
-				$this->log($model,"file $name uploaded successfully");
+				// $this->log($model,"file $name uploaded successfully");
 				$parameter[$name]=$message;
 			}
 			else{
-				$this->log($model,"error uploading file $name");
+				// $this->log($model,"error uploading file $name");
 				continue;
 			}
 		}
@@ -299,7 +299,7 @@ class Form extends CI_Controller
 				mkdir($destination,0777,true);
 			}
 
-			$destination.="$user.".$ext;//the test should be replaced by the name of the current user. 		
+			$destination.='/'.date('y-m-d_h-m-s').".".$ext;//the test should be replaced by the name of the current user. 		
 			if(move_uploaded_file($_FILES[$name]['tmp_name'], $destination)){
 				$message=$destination;
 				return true;//$destination;

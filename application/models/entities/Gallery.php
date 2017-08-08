@@ -11,9 +11,9 @@ static $nullArray=array('uploaded_date' ,'status' );
 /*this array contains the fields that are unique*/
 static $uniqueArray=array(); 
 /*this is an associative array containing the fieldname and the type of the field*/
-static $typeArray = array('image_path'=>'varchar','uploaded_date'=>'timestamp','status'=>'tinyint');  
+static $typeArray = array('image_path'=>'varchar','uploaded_date'=>'timestamp','status'=>'tinyint','is_video'=>'tinyint');  
 /*this is a dictionary that map a field name with the label name that will be shown in a form*/
-static $labelArray=array('ID'=>'','image_path'=>'','uploaded_date'=>'','status'=>''); 
+static $labelArray=array('ID'=>'','image_path'=>'','uploaded_date'=>'','status'=>'','is_video'=>''); 
 /*associative array of fields that have default value*/
 static $defaultArray = array('uploaded_date'=>'CURRENT_TIMESTAMP','status'=>'1');
 //populate this array with fields that are meant to be displayed as document in the format array('fieldname'=>array('filetype','maxsize',foldertosave','preservefilename'))
@@ -26,6 +26,13 @@ function __construct($array=array())
 	parent::__construct($array);
 }
 function getImage_pathFormField($value=''){
+	return "<div class='form-group'>
+	<label for='image_path' >upload image</label>
+		<input type='file' name='image_path' id='image_path' value='$value' class='form-control' required />
+</div> ";
+
+}
+function getIs_videoFormField($value=''){
 	return "<div class='form-group'>
 	<label for='image_path' >Image Path</label>
 		<input type='text' name='image_path' id='image_path' value='$value' class='form-control' required />

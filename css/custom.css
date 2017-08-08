@@ -560,3 +560,70 @@ cursor: pointer;
 		text-decoration: none;
 		color: inherit;
 	}
+	.dashboard-item{
+		height: 10em;
+		width: 30%;
+		margin-left: 3%;
+		float: left;
+		border: solid 2px #ccc;
+		padding: 5px;
+		margin-top: 15px;
+		color: #222;
+		text-align: center;
+		font-size: 1.3em;
+		padding-top: 70px;
+		background-color: #eee;
+
+	}
+	.dashboard-item:hover{
+		text-decoration: none;
+		opacity: 0.8;
+	}
+	/*copied*/
+	.close-dialog{
+		font-size: 2em;
+		margin-top: -20px;
+		color: #ccc;
+		cursor: pointer;
+		color: red;
+		text-shadow: 1px 1px grey;
+	}
+	.table-action{
+		display: none;
+		position: absolute;
+		z-index: 100;
+		background-color: white;
+		border:solid 2px #ddd;
+		border-radius: 4px;
+		box-shadow: 1px 1px 5px;
+		padding: 0;
+		margin-left: -15px;
+	}
+	/*.dropdownbtn:hover .table-action{
+		display: block;
+	}*/
+	.table-action li{
+		background-color: #eee;
+		margin-bottom: 1px;
+		font-size: 1.2em;
+		padding: 2px;
+	}
+	.table-action li:hover{
+		opacity: 0.8;
+	}
+	.table-action li a:hover{
+		text-decoration: none;
+	}
+	.dropdownbtn {
+		position: relative;
+	}
+	.action-list{
+	list-style: none;
+	padding-top: 10px;
+	padding-bottom: 30px;
+	border-bottom: 2px solid #ccc;
+}
+.action-list li{
+	float: left;
+	margin-left: 15px;
+}

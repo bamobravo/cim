@@ -7,13 +7,13 @@
 
 <?php 
 $capitalize = ucfirst($model);
-	$form = $this->Form_builder->start('church_form')
-	->appendInsertForm($capitalize)
-      ->addSubmitLink()
+	$form = $this->Form_builder->start('data_form')
+	->appendUpdateForm($capitalize,true,$id)
+      ->addSubmitLink(null,false)
       ->appendSubmitButton('Save ', 'btn-success')->build(); 
  ?>
 <div class="">
-	<h3 class="underline-block"> Update <?php echo $model ?> Information</h3>
+	<h3 class="underline-block">Update Information changed </h3>
 	<?php echo $form ?>
 </div>
 

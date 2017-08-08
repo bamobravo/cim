@@ -1,26 +1,26 @@
 <?php
 		require_once('application/models/Crud.php');
 		/**
-		* This class  is automatically generated based on the structure of the table. And it represent the model of the news table.
+		* This class  is automatically generated based on the structure of the table. And it represent the model of the blog table.
 		*/
-		class News extends Crud
+		class Blog extends Crud
 		{
-protected static $tablename='News';
+protected static $tablename='Blog';
 /* this array contains the field that can be null*/
-static $nullArray=array('date' );
+static $nullArray=array('date_posted' ,'status' );
 /*this array contains the fields that are unique*/
 static $uniqueArray=array(); 
 /*this is an associative array containing the fieldname and the type of the field*/
-static $typeArray = array('title'=>'varchar','headline'=>'varchar','news_content'=>'text','date'=>'timestamp','author'=>'varchar');  
+static $typeArray = array('title'=>'varchar','summary'=>'varchar','content'=>'text','date_posted'=>'datetime','author'=>'varchar','status'=>'tinyint');  
 /*this is a dictionary that map a field name with the label name that will be shown in a form*/
-static $labelArray=array('ID'=>'','title'=>'','headline'=>'','news_content'=>'','date'=>'','author'=>''); 
+static $labelArray=array('ID'=>'','title'=>'','summary'=>'','content'=>'','date_posted'=>'','author'=>'','status'=>''); 
 /*associative array of fields that have default value*/
-static $defaultArray = array('date'=>'CURRENT_TIMESTAMP');
+static $defaultArray = array('date_posted'=>'CURRENT_TIMESTAMP','status'=>'1');
 //populate this array with fields that are meant to be displayed as document in the format array('fieldname'=>array('filetype','maxsize',foldertosave','preservefilename'))
 //the folder to save must represent a path from the basepath. it should be a relative path,preserve filename will be either true or false. when true,the file will be uploaded with it default filename else the system will pick the current user id in the session as the name of the file.
 static $documentField = array();//array containing an associative array of field that should be regareded as document field. it will contain the setting for max size and data type.
 		
-static $tableAction=array('enable'=>'getEnabled','delete'=>'adm/delete/news','update'=>'adn/edit/news');
+static $tableAction=array('enable'=>'getEnabled','delete'=>'ac/delete/blog','update'=>'vc/blog/edit');
 function __construct($array=array())
 {
 	parent::__construct($array);
@@ -32,21 +32,21 @@ function getTitleFormField($value=''){
 </div> ";
 
 }
-function getHeadlineFormField($value=''){
+function getSummaryFormField($value=''){
 	return "<div class='form-group'>
-	<label for='headline' >Headline</label>
-		<input type='text' name='headline' id='headline' value='$value' class='form-control' required />
+	<label for='summary' >Summary</label>
+		<input type='text' name='summary' id='summary' value='$value' class='form-control' required />
 </div> ";
 
 }
-function getNews_contentFormField($value=''){
+function getContentFormField($value=''){
 	return "<div class='form-group'>
-	<label for='news_content' >News Content</label>
-<textarea id='news_content' name='news_content' class='form-control' required>$value</textarea>
+	<label for='content' >Content</label>
+<textarea id='content' name='content' class='form-control' required>$value</textarea>
 </div> ";
 
 }
-function getDateFormField($value=''){
+function getDate_postedFormField($value=''){
 	return " ";
 
 }
@@ -55,6 +55,16 @@ function getAuthorFormField($value=''){
 	<label for='author' >Author</label>
 		<input type='text' name='author' id='author' value='$value' class='form-control' required />
 </div> ";
+
+}
+function getStatusFormField($value=''){
+	return "<div class='form-group'>
+	<label class='form-checkbox'>Status</label> 
+	<select class='form-control' id='status' name='status' >
+		<option value='1'>Yes</option>
+		<option value='0' selected='selected'>No</option>
+	</select>
+	</div> ";
 
 }
 
