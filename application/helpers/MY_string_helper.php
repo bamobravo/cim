@@ -343,5 +343,16 @@
 		$result.='</div>';
 		return $result;
 	}
+	function formatReadable($date)
+	{
+		$d = date_create($date);
+		$format ='l  d F Y g:i A';
+		return date_format($d,$format);
+	}
 
+	function getEmbed($url)
+	{ 
+		$start = strpos($url, '?v=') +3;
+		return "https://www.youtube.com/embed/".substr($url, $start);
+	}
  ?>

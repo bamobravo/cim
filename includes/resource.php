@@ -11,7 +11,7 @@
     <script src="<?=base_url() ?>js/jquery.fitvids.js"></script>
     <script src="<?=base_url() ?>js/jquery.plugin.js"></script>
     <script src="<?=base_url() ?>js/jquery.countdown.js"></script>
-    <script src="<?=base_url() ?>js/countdown-custom.js"></script>
+    <!-- <script src="<?=base_url() ?>js/countdown-custom.js"></script> -->
     <script src="<?=base_url() ?>js/wow.min.js"></script>
     <script src="<?=base_url() ?>js/custom.js"></script>
 

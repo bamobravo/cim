@@ -7,6 +7,7 @@ class St extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->helper('url');
+		$this->load->helper('string');
 		$this->load->database();
 		$this->load->library('session');
 	}
@@ -39,6 +40,8 @@ class St extends CI_Controller {
 		$return['church']=$church[0];
 		$blog=$this->loadModel('blog','',' limit 3',' order by date_posted desc');
 		$return['blog']=$blog;
+		$event =$blog=$this->loadModel('event','',' limit 3',' order by start_date desc');
+		$return['events']=$event;
 		return $return;
 	}
 	private function showError()

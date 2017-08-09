@@ -260,79 +260,22 @@
 
                     <div class="three-fourth">
                         <div class="fx custom-carousel-1">
+                        <?php foreach ($events as $event): ?>
+                            
+                       
                             <div class="item">
                                 <div class="overlay">
-                                    <span class="time">February 6, 2017</span>
+                                    <span class="time"><?php echo formatReadable($event['start_date']) ?></span>
                                     <a href="#">
-                                        <h3>Family Baptism Class</h3>
+                                        <h3><?php echo $event['name'] ?></h3>
                                     </a>
-                                    <span class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+                                    <span class="desc"><?php echo $event['description'] ?>
                                     </span>
                                 </div>
-                                <img src="<?=base_url() ?>img/events/pic%20(1).jpg" alt="">
+                                <img src="<?=base_url($event['image_location']) ?>" alt="">
                             </div>
+                            <?php endforeach ?>
 
-                            <div class="item">
-                                <div class="overlay">
-                                    <span class="time">February 10, 2017</span>
-                                    <a href="#">
-                                        <h3>Transforming Live</h3>
-                                    </a>
-                                    <span class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
-                                    </span>
-                                </div>
-                                <img src="<?=base_url() ?>img/events/pic%20(2).jpg" alt="">
-                            </div>
-
-                            <div class="item">
-                                <div class="overlay">
-                                    <span class="time">February 20, 2017</span>
-                                    <a href="#">
-                                        <h3>Relationship With God</h3>
-                                    </a>
-                                    <span class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
-                                    </span>
-                                </div>
-                                <img src="<?=base_url() ?>img/events/pic%20(3).jpg" alt="">
-                            </div>
-
-                            <div class="item">
-                                <div class="overlay">
-                                    <span class="time">February 26, 2017</span>
-                                    <a href="#">
-                                        <h3>Abundant Life</h3>
-                                    </a>
-                                    <span class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
-                                    </span>
-                                </div>
-                                <img src="<?=base_url() ?>img/events/pic%20(4).jpg" alt="">
-                            </div>
-
-                            <div class="item">
-                                <div class="overlay">
-                                    <span class="time">March 1, 2017</span>
-                                    <a href="#">
-                                        <h3>God is Good</h3>
-                                    </a>
-                                    <span class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
-                                    </span>
-                                </div>
-                                <img src="<?=base_url() ?>img/events/pic%20(5).jpg" alt="">
-                            </div>
-
-                            <div class="item">
-                                <div class="overlay">
-                                    <span class="time">March 10, 2017</span>
-                                    <a href="#">
-                                        <h3>Jehovah Jireh</h3>
-                                    </a>
-                                    <span class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
-                                    </span>
-                                </div>
-                                <img src="<?=base_url() ?>img/events/pic%20(6).jpg" alt="">
-                            </div>
-
-                        </div>
                     </div>
                 </div>
                 <div class="clearfix"></div>
@@ -345,8 +288,8 @@
                 <div class="container">
                     <div class="row text-center">
                         <div class="col-md-6 wow fadeInLeft">
-                            <h3>Transforming Live, Restoring Hope</h3>
-                            <span class="time">April 10, 2017 8:00 pm</span>
+                            <h3><?php echo $events[0]['name'] ?></h3>
+                            <span class="time"><?php echo formatReadable($events[0]['start_date'] )?></span>
                         </div>
 
                         <div class="col-md-6 wow fadeInRight" data-wow-delay=".25s">
@@ -405,12 +348,11 @@
                             <h2>Latest Sermons</h2>
                             <div class="divider-double"></div>
                         </div>
-
                         <div class="col-md-10 col-md-offset-1">
                         <?php foreach ($sermon as $current): ?>
                             <div class="custom-col-3 wow flipInX">
                                 <div class="left-col">
-                                    <img src="<?=base_url($current['image_location']) ?>" alt="" class="img-responsive">
+                                    <iframe width="500" height="400" src="<?php echo getEmbed($current['image_location'] )?>"></iframe>
                                 </div>
                                 <div class="mid-col">
                                     <a href="#">
@@ -419,9 +361,9 @@
                                     <div class="details"><span>By <a href="#"><?php echo $current['author'] ?></a><?php echo $current['date_posted'] ?></span></div>
                                 </div>
                                 <div class="right-col">
-                                    <a href="#"><i class="fa fa-video-camera"></i></a>
-                                    <a href="#"><i class="fa fa-volume-up"></i></a>
-                                    <a href="#"><i class="fa fa-file-pdf-o"></i></a>
+                                    <a href="<?php echo $current['image_location'] ?>"><i class="fa fa-video-camera"></i></a>
+                                   <!--  <a href="#"><i class="fa fa-volume-up"></i></a>
+                                    <a href="#"><i class="fa fa-file-pdf-o"></i></a> -->
                                 </div>
                             </div>
                         <?php endforeach ?>
@@ -476,60 +418,18 @@
 
                     <div class="three-fourth">
                         <div class="custom-carousel-2">
+                        <?php foreach ($blog as $blogItem): ?>
                             <div class="item-blog">
                                 <div class="inner">
-                                    <span class="date">10 November</span>
+                                    <span class="date"><?php echo formatReadable($blogItem['date_posted']) ?></span>
                                     <a href="#">
-                                        <h3>Gods goal for you</h3>
+                                        <h3><?php echo $blogItem['title'] ?></h3>
                                     </a>
-                                    <span class="desc">The Bible says, "Give thanks in everything"  consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    <span class="desc"><?php echo $blogItem['summary'] ?>
                                     </span>
                                 </div>
                             </div>
-
-                            <div class="item-blog even">
-                                <div class="inner">
-                                    <span class="date">9 November</span>
-                                    <a href="#">
-                                        <h3>The Bible on Campus</h3>
-                                    </a>
-                                    <span class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div class="item-blog">
-                                <div class="inner">
-                                    <span class="date">8 November</span>
-                                    <a href="#">
-                                        <h3>A Faithful Witness</h3>
-                                    </a>
-                                    <span class="desc">Those who are prepared to witness and sensitive to opportunities the Lord opens up will find occasions on every hand to share Christ.
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div class="item-blog even">
-                                <div class="inner">
-                                    <span class="date">7 November</span>
-                                    <a href="#">
-                                        <h3>Transfoming Live</h3>
-                                    </a>
-                                    <span class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div class="item-blog">
-                                <div class="inner">
-                                    <span class="date">6 November</span>
-                                    <a href="#">
-                                        <h3>Restoring Hope</h3>
-                                    </a>
-                                    <span class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    </span>
-                                </div>
-                            </div>
+                        <?php endforeach ?>
 
                         </div>
                     </div>
@@ -539,7 +439,7 @@
             <!-- section close -->
 
             <!-- section begin -->
-            <section id="section-gallery">
+   <!--          <section id="section-gallery">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2 text-center">
@@ -577,11 +477,11 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
             <!-- section close -->
 
             <!-- section begin -->
-            <section id="section-testimonial">
+   <!--          <section id="section-testimonial">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2">
@@ -609,7 +509,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
             <!-- section close -->
 
         </div>
@@ -638,6 +538,13 @@
     </div>
 <?php include_once 'includes/resource.php' ?>
 
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+            $(function () {
+                $('#defaultCountdown').countdown({until: new Date("<?php echo $events[0]['start_date']; ?>")}); // year, month, date, hour
+            });
+    });
+</script>
 </body>
 
 </html>

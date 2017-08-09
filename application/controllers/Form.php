@@ -248,7 +248,6 @@ class Form extends CI_Controller
 	//this function is used to  document
 	private function processFormUpload($model,$parameter){
 		$paramFile= $model::$documentField;
-
 		$fields = array_keys($_FILES);
 		if (empty($paramFile)) {
 			return $parameter;
@@ -257,25 +256,15 @@ class Form extends CI_Controller
 			// $this->log($model,"uploading file $name");
 			if (in_array($name, $fields)) {//if the field name is present in the fields the upload the document
 				list($type,$size,$directory) = $value;
-				// $method ="get".ucfirst($model)."Directory";
-				// $this->load->model('uploadDirectoryManager');
-				// if (method_exists($this->uploadDirectoryManager, $method)) {
-				// 	$dir  = $this->uploadDirectoryManager->$method($parameter);
-				// 	if ($dir===false) {
-				// 		showUploadErrorMessage($this->Session_manager,"Error while uploading file",false);
-				// 	}
-				// 	$directory.=$dir;
-				// }
 				$currentUpload = $this->uploadFile($model,$name,$type,$size,$directory,$message);
-
 				if ($currentUpload==false) {
-					showUploadErrorMessage($this->Session_manager,$message,false);
+					$result['status']=false;
+					$result['message']=$message;
+					echo  json_encode($result);exit;
 				}
-				// $this->log($model,"file $name uploaded successfully");
 				$parameter[$name]=$message;
 			}
 			else{
-				// $this->log($model,"error uploading file $name");
 				continue;
 			}
 		}
