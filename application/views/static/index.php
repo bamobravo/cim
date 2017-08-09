@@ -407,15 +407,16 @@
                         </div>
 
                         <div class="col-md-10 col-md-offset-1">
+                        <?php foreach ($sermon as $current): ?>
                             <div class="custom-col-3 wow flipInX">
                                 <div class="left-col">
-                                    <img src="<?=base_url() ?>img/sermons/pic%20(1).jpg" alt="" class="img-responsive">
+                                    <img src="<?=base_url($current['image_location']) ?>" alt="" class="img-responsive">
                                 </div>
                                 <div class="mid-col">
                                     <a href="#">
-                                        <h3>Transforming Live, Restoring Hope</h3>
+                                        <h3><?php echo $current['title'] ?></h3>
                                     </a>
-                                    <div class="details"><span>By <a href="#">Segs Rook</a>, February 08, 2017</span></div>
+                                    <div class="details"><span>By <a href="#"><?php echo $current['author'] ?></a><?php echo $current['date_posted'] ?></span></div>
                                 </div>
                                 <div class="right-col">
                                     <a href="#"><i class="fa fa-video-camera"></i></a>
@@ -423,41 +424,8 @@
                                     <a href="#"><i class="fa fa-file-pdf-o"></i></a>
                                 </div>
                             </div>
-
-                            <div class="custom-col-3 wow flipInX">
-                                <div class="left-col">
-                                    <img src="<?=base_url() ?>img/sermons/pic%20(2).jpg" alt="" class="img-responsive">
-                                </div>
-                                <div class="mid-col">
-                                    <a href="#">
-                                        <h3>Put Your Faith Into Action</h3>
-                                    </a>
-                                    <div class="details"><span>By <a href="#">Allan Poe</a>, February 15, 2017</span></div>
-                                </div>
-                                <div class="right-col">
-                                    <a href="#"><i class="fa fa-video-camera"></i></a>
-                                    <a href="#"><i class="fa fa-volume-up"></i></a>
-                                    <a href="#"><i class="fa fa-file-pdf-o"></i></a>
-                                </div>
-                            </div>
-
-
-                            <div class="custom-col-3 wow flipInX">
-                                <div class="left-col">
-                                    <img src="<?=base_url() ?>img/sermons/pic%20(3).jpg" alt="" class="img-responsive">
-                                </div>
-                                <div class="mid-col">
-                                    <a href="#">
-                                        <h3>Find And You Shall Seek</h3>
-                                    </a>
-                                    <div class="details"><span>By <a href="#">Ron Ward</a>, February 22, 2017</span></div>
-                                </div>
-                                <div class="right-col">
-                                    <a href="#"><i class="fa fa-video-camera"></i></a>
-                                    <a href="#"><i class="fa fa-volume-up"></i></a>
-                                    <a href="#"><i class="fa fa-file-pdf-o"></i></a>
-                                </div>
-                            </div>
+                        <?php endforeach ?>
+                
                         </div>
                     </div>
                 </div>

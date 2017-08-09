@@ -30,11 +30,16 @@ class St extends CI_Controller {
 
 	private function indexData()
 	{
-		$result = $this->loadModel('church');
-		if ($result==false) {
+		$church = $this->loadModel('church');
+		if ($church==false) {
 			$this->showError();exit;
 		}
-		return $result[0];
+		$sermon = $this->loadModel('sermon','',' limit 3',' order by date_posted desc');
+		$return['sermon']=$sermon;
+		$return['church']=$church[0];
+		$blog=$this->loadModel('blog','',' limit 3',' order by date_posted desc');
+		$return['blog']=$blog;
+		return $return;
 	}
 	private function showError()
 	{
