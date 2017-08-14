@@ -49,6 +49,14 @@ class St extends CI_Controller {
 		$return['events']=$event;
 		return $return;
 	}
+	private function eventsData()
+	{
+		$query = "select * from event order by start_date desc";
+		$result = $this->db->query($query);
+		$result = $result->result_array();
+		$return['events']=$result;
+		return $return;
+	}
 	private function sermonsData()
 	{
 		$query = "select * from sermon order by date_posted desc";
