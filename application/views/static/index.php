@@ -1,92 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <title>CHRIST CHURCH</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <!-- LOAD CSS FILES -->
-    <link href="<?=base_url() ?>css/main.css" rel="stylesheet" type="text/css">
-</head>
-
-<body>
-    <div id="preloader"></div>
-    <div id="wrapper">
-        <!-- header begin -->
-        <header>
-            <div class="container">
-                <span id="menu-btn"></span>
-                <div class="row">
-                    <div class="col-md-3">
-
-                        <!-- logo begin -->
-                        <div id="logo">
-                            <div class="inner">
-                                <a href="index-2">
-                                    <img src="<?=base_url() ?>img/logo.png" alt="" class="logo-1">
-                                    <img src="<?=base_url() ?>img/logo-2.png" alt="" class="logo-2">
-                                </a>
-
-                            </div>
-                        </div>
-                        <!-- logo close -->
-
-                    </div>
-
-                    <div class="col-md-9">
-
-                        <!-- mainmenu begin -->
-                        <div id="mainmenu-container">
-                            <ul id="mainmenu">
-                                <li><a href="index">Home</a>
-                                    <ul>
-                                       
-                                    </ul>
-                                </li>
-                                <li><a href="events">Events</a>
-                                    <ul>
-                                        <li><a href="events">Events List</a></li>
-                                        <li><a href="events-calendar">Events Calendar</a></li>
-                                    
-                                            </ul>
-                                </li>
-                                <li><a href="sermons">Sermons</a>
-                                    <ul>
-                                     
-                                    </ul>
-                                </li>
-                              <li><a href="features">Donations</a></li>
-                                <li><a href="news">News</a>
-									<ul>
-
-                                    </ul>
-								</li>
-                                <li><a href="gallery">Gallery</a></li>
-                                <li><a href="contact">Contact</a></li>
-                            </ul>
-                        </div>
-                        <!-- mainmenu close -->
-
-                        <!-- social icons -->
-                        <div class="social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-rss"></i></a>
-                            <a href="#"><i class="fa fa-google-plus"></i></a>
-                            <a href="#"><i class="fa fa-envelope-o"></i></a>
-                        </div>
-                        <!-- social icons close -->
-
-                    </div>
-                </div>
-            </div>
-
-        </header>
-        <!-- header close -->
-
+        <?php include "includes/header_home.php" ?>
         <!-- slider -->
         <div id="slider">
             <!-- revolution slider begin -->
@@ -130,8 +42,7 @@
                                 data-speed="800"
                                 data-start="1400"
                                 data-easing="easeInOutCubic">
-                                Transforming lives and societies through education, research and innovation.<br>
-                                Incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.<br>
+                                Transforming lives and societies through education, research and innovation.
                             </div>
 
                             <div class="tp-caption sfb text-left"
@@ -140,7 +51,7 @@
                                 data-speed="800"
                                 data-start="1600"
                                 data-easing="easeInOutCubic">
-                                <a class="btn btn-slider" href="#">Read More</a>
+                                <a class="btn btn-slider" href="sermon">Read More</a>
                             </div>
                         </li>
 
@@ -172,8 +83,7 @@
                                 data-speed="800"
                                 data-start="1200"
                                 data-easing="easeInOutCubic">
-                                Put your faith into action today and let your actions be fueled by your faith.<br>
-                                Incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.<br>
+                                Put your faith into action today and let your actions be fueled by your faith.
                             </div>
 
                             <div class="tp-caption sfb text-left"
@@ -182,7 +92,7 @@
                                 data-speed="800"
                                 data-start="1600"
                                 data-easing="easeInOutCubic">
-                                <a class="btn btn-slider" href="#">READ MORE</a>
+                                <a class="btn btn-slider" href="sermon">READ MORE</a>
                             </div>
                         </li>
 
@@ -233,7 +143,7 @@
                                 data-speed="800"
                                 data-start="1600"
                                 data-easing="easeInOutCubic">
-                               <a class="btn btn-slider" href="#">Read More</a> 
+                               <a class="btn btn-slider" href="sermon">Read More</a> 
                             </div>
                         </li>
                     </ul>

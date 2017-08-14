@@ -34,7 +34,7 @@ function getImage_pathFormField($value=''){
 }
 function getIs_videoFormField($value=''){
 	return "<div class='form-group'>
-	<label for='image_path' >Image Path</label>
+	<label for='image_path' >is Video content</label>
 		<input type='text' name='image_path' id='image_path' value='$value' class='form-control' required />
 </div> ";
 
