@@ -41,17 +41,17 @@
                         <!-- mainmenu begin -->
                         <div id="mainmenu-container">
                             <ul id="mainmenu">
-                                <li><a href="index">Home</a>
+                                <li><a href="<?php echo base_url('st/v/') ?>index">Home</a>
                                 </li>
-                                <li><a href="events">Events</a>
+                                <li><a href="<?php echo base_url('st/v/') ?>events">Events</a>
                                 </li>
-                                <li><a href="sermons">Sermons</a>
+                                <li><a href="<?php echo base_url('st/v/') ?>sermons">Sermons</a>
                                 </li>
-                              <li><a href="features">Donations</a></li>
-                                <li><a href="news">News</a>
+                              <li><a href="<?php echo base_url('st/v/') ?>features">Donations</a></li>
+                                <li><a href="<?php echo base_url('st/v/') ?>news">News</a>
 								</li>
-                                <li><a href="gallery">Gallery</a></li>
-                                <li><a href="contact">Contact</a></li>
+                                <li><a href="<?php echo base_url('st/v/') ?>gallery">Gallery</a></li>
+                                <li><a href="<?php echo base_url('st/v/') ?>contact">Contact</a></li>
                             </ul>
                         </div>
                         <!-- mainmenu close -->

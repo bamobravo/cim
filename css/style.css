@@ -2527,3 +2527,26 @@ header .social{
 
 }
 
+.article-title{
+	font-weight: bolder;
+	color: #444;
+	font-size: 2.5em;
+	border-bottom: solid #ccc thin;
+	padding-bottom: 15px;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+.authname{
+	margin-bottom: 30px;
+}
+.authname span{
+	display: inline-block;
+	margin-right: 30px;
+	font-size: 1.4em;
+}
+.main-text{
+	background-color: white;
+	color: black;
+	padding: 15px;
+	font-size: 1.2em;
+}

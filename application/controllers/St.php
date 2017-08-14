@@ -16,7 +16,7 @@ class St extends CI_Controller {
 		header("Location:st/v/index");exit;
 	}
 
-	public function v($page='index')
+	public function v($page='index',$param=false)
 	{
 		if (!file_exists('application/views/static/'.$page.'.php')) {
 			show_404();
@@ -24,7 +24,12 @@ class St extends CI_Controller {
 		$data = array();
 		$method = $page.'Data';
 		if (method_exists($this, $method)) {
-			$data=$this->$method();
+			if ($param) {
+				$data=$this->$method($param);
+			} else {
+				$data=$this->$method();
+			}
+			
 		}
 		$this->load->view('static/'.$page,$data);
 	}
@@ -42,6 +47,22 @@ class St extends CI_Controller {
 		$return['blog']=$blog;
 		$event =$blog=$this->loadModel('event','',' limit 3',' order by start_date desc');
 		$return['events']=$event;
+		return $return;
+	}
+	private function sermonsData()
+	{
+		$query = "select * from sermon order by date_posted desc";
+		$result = $this->db->query($query);
+		$result = $result->result_array();
+		$return['sermons']=$result;
+		return $return;
+	}
+	private function sermonData($id)
+	{
+		$query="select * from sermon where id=?";
+		$result = $this->db->query($query,array($id));
+		$result = $result->result_array();
+		$return['sermon']=$result[0];
 		return $return;
 	}
 	private function showError()
