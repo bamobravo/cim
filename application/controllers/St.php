@@ -63,6 +63,14 @@ class St extends CI_Controller {
 		}
 		
 	}
+	private function galleryData($value='')
+	{
+		$query ="select image_path from gallery order by id desc limit 100";
+		$result = $this->db->query($query);
+		$result = $result->result_array();
+		$return['gallery']= $result;
+		return $return;
+	}
 	private function blogData($id)
 	{
 		$query ="select * from blog where id=?";

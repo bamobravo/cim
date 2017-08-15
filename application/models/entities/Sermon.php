@@ -18,7 +18,7 @@ static $labelArray=array('ID'=>'','title'=>'','main_text'=>'','brief_description
 static $defaultArray = array('status'=>'1');
 //populate this array with fields that are meant to be displayed as document in the format array('fieldname'=>array('filetype','maxsize',foldertosave','preservefilename'))
 //the folder to save must represent a path from the basepath. it should be a relative path,preserve filename will be either true or false. when true,the file will be uploaded with it default filename else the system will pick the current user id in the session as the name of the file.
-static $documentField = array('image_location'=>array(array('png','jpeg','jpg','gif'),1024000,'upload/images/sermon'));//array containing an associative array of field that should be regareded as document field. it will contain the setting for max size and data type.
+static $documentField = array('image_location'=>array(array('png','jpeg','jpg','gif'),1024000,'upload/images'));//array containing an associative array of field that should be regareded as document field. it will contain the setting for max size and data type.
 		
 static $tableAction=array('enable'=>'getEnabled','delete'=>'adm/delete/sermon','update'=>'adm/edit/sermon');
 function __construct($array=array())

@@ -349,7 +349,7 @@
             <!-- section close -->
 
             <!-- section begin -->
-   <!--          <section id="section-gallery">
+            <section id="section-gallery">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2 text-center">
@@ -358,36 +358,48 @@
                         </div>
 
                         <div id="gallery-isotope" class="col-md-12 wow fadeInUp" data-wow-delay=".25s">
+                        <?php if ($gallery): ?>
                             <div class="item long-pic">
-                                <a href="<?=base_url() ?>img/gallery/pic%20(1).jpg" data-gal="prettyPhoto[galllery]"><span class="overlay"></span></a>
-                                <img src="<?=base_url() ?>img/gallery/pic%20(1).jpg" alt="">
+                                <a href="<?=base_url($gallery[0]['image_path']) ?>" data-gal="prettyPhoto[galllery]"><span class="overlay"></span></a>
+                                <img src="<?=base_url($gallery[0]['image_path']) ?>" alt="">
                             </div>
 
-                            <div class="item small-pic">
-                                <a href="<?=base_url() ?>img/gallery/pic%20(2).jpg" data-gal="prettyPhoto[galllery]"><span class="overlay"></span></a>
-                                <img src="<?=base_url() ?>img/gallery/pic%20(2).jpg" alt="">
-                            </div>
+                            <?php if (isset($gallery[1])): ?>
+                                <div class="item small-pic">
+                                    <a href="<?=base_url($gallery[1]['image_path']) ?>" data-gal="prettyPhoto[galllery]"><span class="overlay"></span></a>
+                                    <img src="<?=base_url($gallery[1]['image_path']) ?>" alt="">
+                                </div>
+                            <?php endif ?>
+                            
+                            <?php if (isset($gallery[2])): ?>
+                                <div class="item wide-pic">
+                                    <a href="<?=base_url($gallery[2]['image_path']) ?>" data-gal="prettyPhoto[galllery]"><span class="overlay"></span></a>
+                                    <img src="<?=base_url($gallery[2]['image_path']) ?>" alt="">
+                                </div>
+                            <?php endif ?>
+                            
+                            <?php if (isset($gallery[3])): ?>
+                                <div class="item wide-pic">
+                                    <a href="<?=base_url($gallery[3]['image_path']) ?>" data-gal="prettyPhoto[galllery]"><span class="overlay"></span></a>
+                                    <img src="<?=base_url($gallery[3]['image_path']) ?>" alt="">
+                                </div>
+                            <?php endif ?>
+                            <?php if (isset($gallery[4])): ?>
+                                <div class="item small-pic">
+                                    <a href="<?=base_url($gallery[4]['image_path']) ?>" data-gal="prettyPhoto[galllery]"><span class="overlay"></span></a>
+                                    <img src="<?=base_url($gallery[4]['image_path']) ?>" alt="">
+                                </div>
+                            <?php endif ?>
 
-                            <div class="item wide-pic">
-                                <a href="<?=base_url() ?>img/gallery/pic%20(3).jpg" data-gal="prettyPhoto[galllery]"><span class="overlay"></span></a>
-                                <img src="<?=base_url() ?>img/gallery/pic%20(3).jpg" alt="">
-                            </div>
-
-                            <div class="item wide-pic">
-                                <a href="<?=base_url() ?>img/gallery/pic%20(4).jpg" data-gal="prettyPhoto[galllery]"><span class="overlay"></span></a>
-                                <img src="<?=base_url() ?>img/gallery/pic%20(4).jpg" alt="">
-                            </div>
-
-                            <div class="item small-pic">
-                                <a href="<?=base_url() ?>img/gallery/pic%20(5).jpg" data-gal="prettyPhoto[galllery]"><span class="overlay"></span></a>
-                                <img src="<?=base_url() ?>img/gallery/pic%20(5).jpg" alt="">
-                            </div>
+                            
+                        <?php endif ?>
+                            
 
 
                         </div>
                     </div>
                 </div>
-            </section> -->
+            </section>
             <!-- section close -->
 
             <!-- section begin -->

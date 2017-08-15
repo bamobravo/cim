@@ -31,56 +31,77 @@
                 </div>
                 <div class="row">
                     <div id="gallery-isotope" class="zoom-gallery col-md-12">
+                    <?php if ($gallery): ?>
                         <div class="item long-pic event">
-                            <a class="<?= base_url() ?>image-popup-gallery" href="img/gallery/pic%20(1).jpg"><span class="overlay"></span>
-                            <img src="<?= base_url() ?>img/gallery/pic%20(1).jpg" alt="">
+                            <a class="image-popup-gallery" href="<?php echo base_url($gallery[0]['image_path']) ?>"><span class="overlay"></span>
+                            <img src="<?= base_url($gallery[0]['image_path']) ?>" alt="">
                             </a>
                         </div>
 
-                        <div class="item wide-pic news">
-                            <a href="<?= base_url() ?>img/gallery/pic%20(3).jpg"><span class="overlay"></span></a>
-                            <img src="<?= base_url() ?>img/gallery/pic%20(3).jpg" alt="">
-                        </div>
+                        <?php if (isset($gallery[1])): ?>
+                            <div class="item wide-pic news">
+                                <a href="<?= base_url($gallery[1]['image_path']) ?>"><span class="overlay"></span></a>
+                                <img src="<?= base_url($gallery[1]['image_path']) ?>" alt="">
+                            </div>
+                        <?php endif ?>
+                       
+                        <?php if (isset($gallery[2])): ?>
+                            <div class="item small-pic gallery">
+                                <a href="<?= base_url($gallery[2]['image_path']) ?>"><span class="overlay"></span></a>
+                                <img src="<?= base_url($gallery[2]['image_path']) ?>" alt="">
+                            </div>
+                        <?php endif ?>
+                       
+                       <?php if (isset($gallery[3])): ?>
+                           <div class="item small-pic event">
+                               <a href="<?= base_url($gallery[3]['image_path']) ?>"><span class="overlay"></span></a>
+                               <img src="<?php echo base_url($gallery[3]['image_path']) ?>" alt="">
+                           </div>
+                       <?php endif ?>
+                        <?php if (isset($gallery[4])): ?>
+                            <div class="item wide-pic news">
+                                <a href="<?php echo base_url($gallery[4]['image_path']) ?>"><span class="overlay"></span></a>
+                                <img src="<?php echo base_url($gallery[4]['image_path']) ?>" alt="">
+                            </div>
+                        <?php endif ?>
+                       <?php if (isset($gallery[5])): ?>
+                           <div class="item small-pic gallery">
+                               <a href="<?= base_url($gallery[5]['image_path']) ?>"><span class="overlay"></span></a>
+                               <img src="<?= base_url($gallery[5]['image_path']) ?>" alt="">
+                           </div>
+                       <?php endif ?>
 
-                        <div class="item small-pic gallery">
-                            <a href="<?= base_url() ?>img/gallery/pic%20(2).jpg"><span class="overlay"></span></a>
-                            <img src="<?= base_url() ?>img/gallery/pic%20(2).jpg" alt="">
-                        </div>
-                        <div class="item small-pic event">
-                            <a href="<?= base_url() ?>img/gallery/pic%20(5).jpg"><span class="overlay"></span></a>
-                            <img src="img/gallery/pic%20(5).jpg" alt="">
-                        </div>
-                        <div class="item wide-pic news">
-                            <a href="img/gallery/pic%20(4).jpg"><span class="overlay"></span></a>
-                            <img src="img/gallery/pic%20(4).jpg" alt="">
-                        </div>
+                        <?php if (isset($gallery[6])): ?>
+                            <div class="item wide-pic">
+                                <a href="<?= base_url($gallery[6]['image_path']) ?>""><span class="overlay"></span></a>
+                                <img src="<?php echo base_url($gallery[6]['image_path']) ?>" alt="">
+                            </div>
+                        <?php endif ?>
+                       <?php if (isset($gallery[7])): ?>
+                           <div class="item long-pic news">
+                               <a href="<?= base_url($gallery[7]['image_path']) ?>"><span class="overlay"></span></a>
+                               <img src="<?= base_url($gallery[7]['image_path']) ?>" alt="">
+                           </div>
+                       <?php endif ?>
 
-                        <div class="item small-pic gallery">
-                            <a href="<?= base_url() ?>img/gallery/pic%20(2).jpg"><span class="overlay"></span></a>
-                            <img src="<?= base_url() ?>img/gallery/pic%20(2).jpg" alt="">
-                        </div>
-                        <div class="item wide-pic">
-                            <a href="<?= base_url() ?>img/gallery/pic%20(3)""><span class="overlay"></span></a>
-                            <img src="img/gallery/pic%20(3).jpg" alt="">
-                        </div>
+                       <?php if (isset($gallery[8])): ?>
+                           <div class="item wide-pic gallery">
+                               <a href="<?= base_url($gallery[8]['image_path']) ?>"><span class="overlay"></span></a>
+                               <img src="<?= base_url($gallery[8]['image_path']) ?>" alt="">
+                           </div>
+                       <?php endif ?>
+                       
+                       <?php if (isset($gallery[9])): ?>
+                           <div class="item small-pic event">
+                               <a href="<?= base_url($gallery[9]['image_path']) ?>"><span class="overlay"></span></a>
+                               <img src="<?= base_url($gallery[9]['image_path']) ?>" alt="">
+                           </div>
+                       <?php endif ?>
 
-
-                        <div class="item long-pic news">
-                            <a href="<?= base_url() ?>img/gallery/pic%20(1).jpg"><span class="overlay"></span></a>
-                            <img src="<?= base_url() ?>img/gallery/pic%20(1).jpg" alt="">
-                        </div>
-
-                        <div class="item wide-pic gallery">
-                            <a href="<?= base_url() ?>img/gallery/pic%20(4).jpg"><span class="overlay"></span></a>
-                            <img src="<?= base_url() ?>img/gallery/pic%20(4).jpg" alt="">
-                        </div>
-
-                        <div class="item small-pic event">
-                            <a href="<?= base_url() ?>img/gallery/pic%20(1).jpg"><span class="overlay"></span></a>
-                            <img src="<?= base_url() ?>img/gallery/pic%20(5).jpg" alt="">
-                        </div>
-
-
+                    <?php else: ?>
+                        <div>not picture found in the gallery please check back.</div>
+                    <?php endif ?>
+                        
 
                     </div>
                 </div>

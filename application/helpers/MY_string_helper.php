@@ -346,7 +346,7 @@
 	function formatReadable($date)
 	{
 		$d = date_create($date);
-		$format ='l  d F Y g:i A';
+		$format ='D  d M Y g:i A';
 		return date_format($d,$format);
 	}
 
