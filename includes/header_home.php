@@ -25,7 +25,7 @@
                         <!-- logo begin -->
                         <div id="logo">
                             <div class="inner">
-                                <a href="index-2">
+                                <a href="<?php echo base_url('st/v/index') ?>">
                                     <img src="<?=base_url() ?>img/logo.png" alt="" class="logo-1">
                                     <img src="<?=base_url() ?>img/logo-2.png" alt="" class="logo-2">
                                 </a>
@@ -48,7 +48,7 @@
                                 <li><a href="<?php echo base_url('st/v/') ?>sermons">Sermons</a>
                                 </li>
                               <li><a href="<?php echo base_url('st/v/') ?>donations">Donations</a></li>
-                                <li><a href="<?php echo base_url('st/v/') ?>news">News</a>
+                                <li><a href="<?php echo base_url('st/v/') ?>news">News/Blogs</a>
 								</li>
                                 <li><a href="<?php echo base_url('st/v/') ?>gallery">Gallery</a></li>
                                 <li><a href="<?php echo base_url('st/v/') ?>contact">Contact</a></li>

@@ -5,7 +5,7 @@
                 <div class="row">
                     <div class="col-md-12">
 
-                        <h1>News</h1>
+                        <h1>News/Blogs</h1>
                     </div>
                 </div>
             </div>
@@ -20,135 +20,36 @@
                 <div class="row">
                     <div class="col-md-8">
                         <ul class="blog-list">
-                            <li>
-                                <div class="info">
-                                    <div class="date-box">
-                                        <span class="day">01</span>
-                                        <span class="month">FEB</span>
+                        <?php if ($blogs): ?>
+                            <?php foreach ($blogs as $blog): ?>
+                                <?php 
+                                    $date=date_create($blog['date_posted']);
+                                    $day = $date->format('d');
+                                    $month=$date->format('M');
+                                    // $time = $date->format('h:i a');
+                                 ?>
+                                <li>
+                                    <div class="info">
+                                        <div class="date-box">
+                                            <span class="day"><?php echo $day ?></span>
+                                            <span class="month"><?php echo $month ?></span>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="preview">
-                                    <img src="<?= base_url() ?>img/blog/pic-blog-1.jpg" alt="" />
-                                    <a href="news-single">
-                                        <h3 class="blog-title">Lin: 'God Is Challenging Me!'</h3>
-                                    </a>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                </div>
-                                <div class="meta-info">By: <a href="#">Admin</a><span>|</span><a href="#">Faith</a>, <a href="#">People</a><span>|</span><a href="#">2 Comments</a></div>
-                            </li>
-
-                            <li>
-                                <div class="info">
-                                    <div class="date-box">
-                                        <span class="day">05</span>
-                                        <span class="month">FEB</span>
+                                    <div class="preview">
+                                        <img src="<?= base_url() ?>img/blog/pic-blog-1.jpg" alt="" />
+                                        <a href="<?php echo base_url('st/v/blog/'.$blog['ID']) ?>">
+                                            <h3 class="blog-title"><?php echo $blog['title'] ?></h3>
+                                        </a><?php echo $blog['summary'] ?>
                                     </div>
-                                </div>
-                                <div class="preview">
-                                    <img src="<?= base_url() ?>img/blog/pic-blog-2.jpg" alt="" />
-                                    <a href="news-single">
-                                        <h3 class="blog-title">10 Bible Verses for 2017</h3>
-                                    </a>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                </div>
-                                <div class="meta-info">By: <a href="#">Admin</a><span>|</span><a href="#">daily bread</a>, <a href="#">inspiration</a><span>|</span><a href="#">2 Comments</a></div>
-                            </li>
+                                    <div class="meta-info">By: <a href="#"><?php echo $blog['author'] ?></a><span>|</span><a href="#">Faith</a>, <a href="#">People</a><span>|</span></div>
+                                </li>
 
-                            <li>
-                                <div class="info">
-                                    <div class="date-box">
-                                        <span class="day">18</span>
-                                        <span class="month">FEB</span>
-                                    </div>
-                                </div>
-                                <div class="preview">
-                                    <img src="<?= base_url() ?>img/blog/pic-blog-3.jpg" alt="" />
-                                    <a href="#">
-                                        <h3 class="blog-title">Crouch goes Home to Jesus</h3>
-                                    </a>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                </div>
-                                <div class="meta-info">By: <a href="#">Admin</a><span>|</span><a href="#">Course</a>, <a href="#">Promotion</a><span>|</span><a href="#">2 Comments</a></div>
-                            </li>
-
-
-                            <li>
-                                <div class="info">
-                                    <div class="date-box">
-                                        <span class="day">21</span>
-                                        <span class="month">FEB</span>
-                                    </div>
-                                </div>
-                                <div class="preview">
-                                    <img src="<?= base_url() ?>img/blog/pic-blog-4.jpg" alt="" />
-                                    <a href="#">
-                                        <h3 class="blog-title">Our Most Christian Congress?</h3>
-                                    </a>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                </div>
-                                <div class="meta-info">By: <a href="#">Admin</a><span>|</span><a href="#">Course</a>, <a href="#">Promotion</a><span>|</span><a href="#">2 Comments</a></div>
-                            </li>
-
-                            <li>
-                                <div class="info">
-                                    <div class="date-box">
-                                        <span class="day">23</span>
-                                        <span class="month">FEB</span>
-                                    </div>
-                                </div>
-                                <div class="preview">
-                                    <img src="<?= base_url() ?>img/blog/pic-blog-2.jpg" alt="" />
-                                    <a href="news-single">
-                                        <h3 class="blog-title">Paris Hostage Crises Over</h3>
-                                    </a>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                </div>
-                                <div class="meta-info">By: <a href="#">Admin</a><span>|</span><a href="#">Course</a>, <a href="#">Promotion</a><span>|</span><a href="#">2 Comments</a></div>
-                            </li>
-
-                            <li>
-                                <div class="info">
-                                    <div class="date-box">
-                                        <span class="day">25</span>
-                                        <span class="month">FEB</span>
-                                    </div>
-                                </div>
-                                <div class="preview">
-                                    <img src="<?= base_url() ?>img/blog/pic-blog-1.jpg" alt="" />
-                                    <a href="news-single">
-                                        <h3 class="blog-title">Mitt Romney 'S Presidential Run</h3>
-                                    </a>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                </div>
-                                <div class="meta-info">By: <a href="#">Admin</a><span>|</span><a href="#">Course</a>, <a href="#">Promotion</a><span>|</span><a href="#">2 Comments</a></div>
-                            </li>
-
-                            <li>
-                                <div class="info">
-                                    <div class="date-box">
-                                        <span class="day">27</span>
-                                        <span class="month">FEB</span>
-                                    </div>
-                                </div>
-                                <div class="preview">
-                                    <img src="<?= base_url() ?>img/blog/pic-blog-4.jpg" alt="" />
-                                    <a href="#">
-                                        <h3 class="blog-title">5 Million Join Jesus Parade</h3>
-                                    </a>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                </div>
-                                <div class="meta-info">By: <a href="#">Admin</a><span>|</span><a href="#">Course</a>, <a href="#">Promotion</a><span>|</span><a href="#">2 Comments</a></div>
-                            </li>
-
-
-                            <li>
-                                <div class="info">
-                                    <div class="date-box">
-                                        <span class="day">29</span>
-                                        <span class="month">FEB</span>
-                                    </div>
-                                </div>
-                                <div class="preview">
-                                    <img src="<?= base_url() ?>img/blog/pic-blog-3.jpg" alt="" />
-                                    <a href="#">
-                                        <h3 class="blog-title">Does Science Point to God?</h3>
-                                    </a>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                </div>
-                                <div class="meta-info">By: <a href="#">Admin</a><span>|</span><a href="#">Course</a>, <a href="#">Promotion</a><span>|</span><a href="#">2 Comments</a></div>
-                            </li>
+                            <?php endforeach ?>
+                        <?php else: ?>
+                            <div>
+                                No blog post yet please check back.
+                            </div>
+                        <?php endif ?>
 
                         </ul>
 
@@ -172,44 +73,40 @@
                         <div class="widget latest_news">
                             <h3>Latest News</h3>
                             <ul class="bloglist-small">
-                                <li>
-                                    <div class="date-box">
-                                        <span class="day">01</span>
-                                        <span class="month">FEB</span>
-                                    </div>
-                                    <div class="txt">
-                                        <h5><a href="css/index#">Lin: 'God Is Challenging Me!'</a></h5>
-                                        <div>
-                                            <div>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque </div>
+                            <?php if ($news): ?>
+                                <?php foreach ($news as $new): ?>
+                                    <?php 
+                                    $date=date_create($new['date']);
+                                    $day = $date->format('d');
+                                    $month=$date->format('M');
+                                    // $time = $date->format('h:i a');
+                                 ?>
+                                    <li>
+                                        <div class="date-box">
+                                            <span class="day"><?php echo $day ?></span>
+                                            <span class="month"><?php echo $month ?></span>
                                         </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="date-box">
-                                        <span class="day">05</span>
-                                        <span class="month">FEB</span>
-                                    </div>
-                                    <div class="txt">
-                                        <h5><a href="css/index#">10 Bible Verses for 2017</a></h5>
-                                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="date-box">
-                                        <span class="day">18</span>
-                                        <span class="month">FEB</span>
-                                    </div>
-                                    <div class="txt">
-                                        <h5><a href="css/index#">Andraé Crouch goes Home to Jesus</a></h5>
-                                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                                    </div>
-                                </li>
+                                        <div class="txt">
+                                            <h5><a href="<?php echo base_url('st/v/news_details/'.$new['ID']) ?>"><?php echo $new['title'] ?></a></h5>
+                                            <div>
+                                                <div><?php echo $new['headline'] ?> </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                <?php endforeach ?>
+                            <?php else: ?>
+                                <div>
+                                    no new yet please check again
+                                </div>
+                            <?php endif ?>
+                                
+                                
                             </ul>
                         </div>
 
                         <!-- widget category -->
                         <!-- widget tags -->
-                        <div class="widget widget_tags">
+                       <!--  <div class="widget widget_tags">
                             <h3><span>Tags</span></h3>
                             <ul>
                                 <li><a href="#link">paralax</a></li>
@@ -225,12 +122,12 @@
                                 <li><a href="#link">non profit</a></li>
                                 <li><a href="#link">religion</a></li>
                             </ul>
-                        </div>
+                        </div> -->
 
                         <!-- widget text -->
                         <div class="widget widget-text">
                             <h3>Our Address</h3>
-                            <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.id/maps?f=q&amp;source=s_q&amp;hl=en&amp;q=16+Riverside+Rd,+Singapore&amp;sll=-2.547988,118.037109&amp;sspn=29.394918,50.756836&amp;ie=UTF8&amp;geocode=Fb8IFgAdu40vBg&amp;split=0&amp;hq=&amp;hnear=16+Riverside+Rd,+Singapore&amp;ll=1.444031,103.779771&amp;spn=0.014522,0.024784&amp;t=m&amp;z=14&amp;output=embed&amp;iwloc=false"></iframe>
+                            <!-- <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.id/maps?f=q&amp;source=s_q&amp;hl=en&amp;q=16+Riverside+Rd,+Singapore&amp;sll=-2.547988,118.037109&amp;sspn=29.394918,50.756836&amp;ie=UTF8&amp;geocode=Fb8IFgAdu40vBg&amp;split=0&amp;hq=&amp;hnear=16+Riverside+Rd,+Singapore&amp;ll=1.444031,103.779771&amp;spn=0.014522,0.024784&amp;t=m&amp;z=14&amp;output=embed&amp;iwloc=false"></iframe> -->
 
 
                             <address>

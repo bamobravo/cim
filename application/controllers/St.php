@@ -49,6 +49,34 @@ class St extends CI_Controller {
 		$return['events']=$event;
 		return $return;
 	}
+	private function news_detailsData($id)
+	{
+		$query ="select * from news where id=?";
+		$result = $this->db->query($query,array($id));
+		$result = $result->result_array();
+		$return = array();
+		if ($result ==false) {
+			$return['news']=false;
+		} else {
+			$return['news']=$result[0];
+			return $return;
+		}
+		
+	}
+	private function blogData($id)
+	{
+		$query ="select * from blog where id=?";
+		$result = $this->db->query($query,array($id));
+		$result = $result->result_array();
+		$return = array();
+		if ($result ==false) {
+			$return['blog']=false;
+		} else {
+			$return['blog']=$result[0];
+			return $return;
+		}
+		
+	}
 	private function donationsData()
 	{
 		$query = "select purpose from payment_purpose";
@@ -100,9 +128,23 @@ class St extends CI_Controller {
 		}
 		
 	}
+	private function newsData()
+	{
+		$len = 30;
+		$start=isset($_GET['p'])?$_GET['p']:'';
+		# select new and blog for the display
+		$query = "select * from blog order by id desc limit $start $len";
+		$result = $this->db->query($query);
+		$result = $result->result_array();
+		$return['blogs']=$result;
+		$query = "select * from news order by id desc";
+		$result = $this->db->query($query);
+		$return['news']=$result->result_array();
+		return $return;
+	}
 	private function showError()
 	{
-		echo "error occured";
+		echo "error occured";exit;
 	}
 	private function loadModel($model,$where='',$limit='',$order='')
 	{
