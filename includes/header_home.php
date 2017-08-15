@@ -47,7 +47,7 @@
                                 </li>
                                 <li><a href="<?php echo base_url('st/v/') ?>sermons">Sermons</a>
                                 </li>
-                              <li><a href="<?php echo base_url('st/v/') ?>features">Donations</a></li>
+                              <li><a href="<?php echo base_url('st/v/') ?>donations">Donations</a></li>
                                 <li><a href="<?php echo base_url('st/v/') ?>news">News</a>
 								</li>
                                 <li><a href="<?php echo base_url('st/v/') ?>gallery">Gallery</a></li>

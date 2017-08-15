@@ -49,6 +49,14 @@ class St extends CI_Controller {
 		$return['events']=$event;
 		return $return;
 	}
+	private function donationsData()
+	{
+		$query = "select purpose from payment_purpose";
+		$result = $this->db->query($query);
+		$result = $result->result_array();
+		$return['purpose']=$result;
+		return $return;
+	}
 	private function eventsData()
 	{
 		$query = "select * from event order by start_date desc";
@@ -72,6 +80,25 @@ class St extends CI_Controller {
 		$result = $result->result_array();
 		$return['sermon']=$result[0];
 		return $return;
+	}
+	public function initP()
+	{
+		if (isset($_POST['sub'])) {
+			$name = $_POST['name'];
+			$email =$_POST['email'];
+			$phone = $_POST['phone'];
+			$purpose=$_POST['purpose'];
+			$amount = $_POST['amount'];
+			if (empty($amount) || empty($purpose)) {
+				echo "kindly specify amount amount and purpose of donation";exit;
+			}
+			$data = $_POST;
+			$data['link']='';//link to the payment gateway, the specification of other parameters will be done here too.
+			$this->load->view('payment_gateway',$data);
+		} else {
+			show_404();
+		}
+		
 	}
 	private function showError()
 	{

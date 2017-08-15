@@ -11,9 +11,9 @@ static $nullArray=array('comment' ,'date_paid' ,'currency' );
 /*this array contains the fields that are unique*/
 static $uniqueArray=array(); 
 /*this is an associative array containing the fieldname and the type of the field*/
-static $typeArray = array('payer'=>'varchar','purpose'=>'int','amount'=>'double','comment'=>'text','date_paid'=>'timestamp','payment_gateway'=>'text','currency'=>'varchar');  
+static $typeArray = array('payer'=>'varchar','purpose'=>'int','amount'=>'double','comment'=>'text','date_paid'=>'timestamp','payment_gateway'=>'text','currency'=>'varchar','payer_phonenumber'=>'varchar','payer_email_address'=>'varchar');  
 /*this is a dictionary that map a field name with the label name that will be shown in a form*/
-static $labelArray=array('id'=>'','payer'=>'','purpose'=>'','amount'=>'','comment'=>'','date_paid'=>'','payment_gateway'=>'','currency'=>''); 
+static $labelArray=array('id'=>'','payer'=>'','purpose'=>'','amount'=>'','comment'=>'','date_paid'=>'','payment_gateway'=>'','currency'=>'','payer_phonenumber'=>'','payer_email_address'=>''); 
 /*associative array of fields that have default value*/
 static $defaultArray = array('date_paid'=>'CURRENT_TIMESTAMP','currency'=>'naira');
 //populate this array with fields that are meant to be displayed as document in the format array('fieldname'=>array('filetype','maxsize',foldertosave','preservefilename'))
