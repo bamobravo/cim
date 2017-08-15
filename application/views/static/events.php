@@ -25,8 +25,8 @@
                             <div class="col-md-6 event-item">
                                 <div class="inner">
                                     <div class="left-col">
-                                    <iframe src="<?php echo $event['image_location'] ?>"></iframe>
-                                        <!-- <img src="<?= base_url() ?>img/events/pic%20(1).jpg" alt=""> -->
+                                    <!-- <iframe src="<?php echo $event['image_location'] ?>"></iframe> -->
+                                        <img src="<?= base_url($event['image_location']) ?>" alt="">
                                     </div>
                                     <div class="right-col">
                                     <?php 

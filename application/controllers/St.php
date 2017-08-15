@@ -85,6 +85,32 @@ class St extends CI_Controller {
 		}
 		
 	}
+	private function unitsData()
+	{
+		$query ="select * from unit order by id desc";
+		$result = $this->db->query($query);
+		$result = $result->result_array();
+		if ($result==false) {
+			return false;
+		}
+		$return['units'] = $result;
+		return $return;
+	}
+	private function unitData($id)
+	{
+		$query ="select * from unit where id=?";
+		$result = $this->db->query($query,array($id));
+		$result = $result->result_array();
+		if ($result==false) {
+			return false;
+		}
+		$return['unit']= $result[0];
+		$query = "select * from unit_activity where unit=?";
+		$result= $this->db->query($query,array($id));
+		$result=$result->result_array();
+		$return['activities']=$result;
+		return $return;
+	}
 	private function donationsData()
 	{
 		$query = "select purpose from payment_purpose";

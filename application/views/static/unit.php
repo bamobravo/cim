@@ -6,7 +6,7 @@
                 <div class="row">
                     <div class="col-md-12">
 
-                        <h1>SERMON TITLE: <?php echo $sermon['title'] ?></h1>
+                        <h1><?php echo $unit['unit_name'] ?></h1>
                     </div>
                 </div>
             </div>
@@ -21,13 +21,43 @@
                 <div class="row">
                     <div class="col-md-10 col-md-offset-1">
 
-                  <div class="article-title"><?php echo $sermon['title'] ?></div>
-                  <div class="authname"> <span> <?php echo $sermon['author'] ?></span><span><?php echo formatReadable($sermon['date_posted']) ?></span></div>
-                  <div class="authname" style="font-style: italic;"> <?php echo $sermon['bible_passages'] ?></div>
-                  <div class="main-text">
-                      <?php echo str_replace("\n", '<br>',$sermon['main_text'] )  ?>
+                  <div class="article-title"><?php echo $unit['unit_name'] ?></div>
+                  <h3><?php echo $unit['unit_name'] ?> In Summary</h3>
+                 <div>
+                     <?php echo $unit['brief_description'] ?>
+                 </div>
+                 <h3><?php echo $unit['unit_name'] ?> Information</h3>
+                 <div>
+                     <?php echo $unit['full_description'] ?>
+                 </div>
+                  <h3>How to Join <?php echo $unit['unit_name'] ?></h3>
+                  <div>
+                      <?php echo $unit['joining_instruction'] ?>
                   </div>
-                       
+                  <h3><?php echo $unit['unit_name'] ?> Activities</h3>
+                       <div>
+                           <table class="table">
+                           <tr>
+                               <th>Week Days</th>
+                               <td>Activity</td>
+                           </tr>
+                           <?php if ($activities): ?>
+                               <?php foreach ($activities as $activity): ?>
+                                   <tr>
+                                       <td><?php echo $activity['week_day'] ?></td>
+                                       <td><?php echo $activity['activity'] ?></td>
+                                   </tr>
+                               <?php endforeach ?>
+                           <?php else: ?>
+                            <tr>
+                                <td colspan="2">
+                                    no activity found for this unit.
+                                </td>
+                            </tr>
+                           <?php endif ?>
+                               
+                           </table>
+                       </div>
                     </div>
                 </div>
             </div>
@@ -60,7 +90,16 @@
         </footer>
         <!-- footer close -->
     </div>
-
+<style type="text/css">
+    h3{
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+        border-bottom: solid thin #777;
+    }
+    .row div{
+        padding: 15px;
+    }
+</style>
     <!-- LOAD JS FILES -->
     <script src="<?= base_url() ?>js/jquery.min.js"></script>
     <script src="<?= base_url() ?>js/bootstrap.min.js"></script>

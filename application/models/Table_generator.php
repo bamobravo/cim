@@ -23,7 +23,7 @@ class Table_generator extends CI_Model
 	*$page variable paging ability is included as a part of the generated html
 	*/
 	//model is the name of the class while data is the objects needed to be changed into a table.
-	public function getFilteredTableHtml($model,$conditionArray,&$message='',$exclusionArray=array(),$action=null,$paged= true,$start=0,$length=NULL,$resolve=true,$sort=''){
+	public function getFilteredTableHtml($model,$conditionArray,&$message='',$exclusionArray=array(),$action=null,$paged= true,$start=0,$length=NULL,$resolve=true,$sort=' order by id desc'){
 		if ($paged) {
 			$length = $length?$length:$this->defaultPagingLength;
 		}
@@ -66,7 +66,7 @@ class Table_generator extends CI_Model
 		}
 		return $result;
 	}
-	public function getTableHtml($model,&$message='',$exclusionArray=array(),$action=null,$paged= true,$start=0,$length=NULL,$resolve=true,$sort=''){
+	public function getTableHtml($model,&$message='',$exclusionArray=array(),$action=null,$paged= true,$start=0,$length=NULL,$resolve=true,$sort=' order by ID desc'){
 		loadClass($this->load,$model);
 		if ($paged) {
 			$length = $length?$length:$this->defaultPagingLength;

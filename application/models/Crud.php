@@ -196,14 +196,14 @@ class Crud extends CI_Model
 			$data = array_merge($data,$array);
 		}
 		if ($whereString) {
-			$query = $resolveForeign?$this->buildSelectClause()." where  $whereString $limit":"SELECT SQL_CALC_FOUND_ROWS * from $tablename where  $whereString $limit";
+			$query = $resolveForeign?$this->buildSelectClause()." where  $whereString $sort $limit":"SELECT SQL_CALC_FOUND_ROWS * from $tablename where  $whereString $sort $limit";
 
 		}
 		else{
 			$query = $resolveForeign?$this->buildSelectClause()."  $limit":"SELECT SQL_CALC_FOUND_ROWS * from $tablename  $limit";
 
 		}
-		$query.=' '.$sort;
+		// $query.=' '.$sort;
 		$result= $this->query($query,$data,$dbObject);
 		$result2 = $this->query("SELECT FOUND_ROWS() as totalCount");
 		$totalRow=$result2[0]['totalCount'];
@@ -240,7 +240,7 @@ class Crud extends CI_Model
 			$limit = " LIMIT ?,?";
 			$array=array($lower,$length);
 		}
-		$query =$resolveForeign?$this->buildSelectClause()." $limit":"SELECT SQL_CALC_FOUND_ROWS * FROM $tablename $limit $sort";
+		$query =$resolveForeign?$this->buildSelectClause()." $sort $limit":"SELECT SQL_CALC_FOUND_ROWS * FROM $tablename $sort $limit ";
 		$result = $this->query($query,$array);
 		$result2 = $this->query("SELECT FOUND_ROWS() as totalCount");
 		$totalRow=$result2[0]['totalCount'];

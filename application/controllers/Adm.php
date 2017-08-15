@@ -17,7 +17,7 @@ class Adm extends CI_Controller
 		$this->load->model('Form_builder');
 		$this->load->model('Table_generator');
 	}
-	public function v($page)
+	public function v($page,$id='')
 	{
 		if (!$this->modelExists($page)) {
 			show_404();exit;
@@ -29,6 +29,7 @@ class Adm extends CI_Controller
 		if(method_exists($this, $method)){
 			$data = array_merge($data,$this->$method());
 		}
+		$data['id']=$id;
 		$this->load->view('insert',$data);
 	}
 	private function query($query,$data=array()){
@@ -90,6 +91,21 @@ private function getChurch()
 		return false;
 	}
 	return $result[0]['id'];
+}
+public function delete($model,$id)
+{
+	$query = "delete from $model where ID=?";
+	$result = $this->db->query($query,array($id));
+	$return=array();
+	if ($result) {
+		$return['status']=true;
+		$return['message']="$model deleted successfully";
+	}
+	else{
+		$return['status']=false;
+		$return['message']='error occured while performing operation';
+	}
+	echo json_encode($return);exit;
 }
 }
  ?>

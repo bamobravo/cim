@@ -5,8 +5,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-
-                        <h1>SERMON TITLE: <?php echo $sermon['title'] ?></h1>
+                        <h1>Units</h1>
                     </div>
                 </div>
             </div>
@@ -17,20 +16,27 @@
 
         <!-- content begin -->
         <div id="content">
+
             <div class="container">
                 <div class="row">
-                    <div class="col-md-10 col-md-offset-1">
+                    <!-- event item begin -->
+                    <?php if ($units): ?>
+                        <?php foreach ($units as $unit): ?>
+                            <div >
+                               <a class=" event-item" href="<?php echo base_url('st/v/unit/'.$unit['ID']) ?>" >
+                                   <div class="unit-name"><?php echo $unit['unit_name'] ?></div>
+                                   <div class="unit-description"><?php echo $unit['brief_description'] ?></div>
+                               </a>
+                            </div>
+                        <?php endforeach ?>
+                    <?php else: ?>
+                        <div>cannot find any unit</div>
+                    <?php endif ?>
+                
 
-                  <div class="article-title"><?php echo $sermon['title'] ?></div>
-                  <div class="authname"> <span> <?php echo $sermon['author'] ?></span><span><?php echo formatReadable($sermon['date_posted']) ?></span></div>
-                  <div class="authname" style="font-style: italic;"> <?php echo $sermon['bible_passages'] ?></div>
-                  <div class="main-text">
-                      <?php echo str_replace("\n", '<br>',$sermon['main_text'] )  ?>
-                  </div>
-                       
-                    </div>
                 </div>
             </div>
+
         </div>
         <!-- content close -->
 
@@ -41,7 +47,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        &copy; Copyiright 2017 - Rastvor Labs
+                        &copy; Copyiright 2017 Rastvor Labs
                     </div>
                     <div class="col-md-6">
                         <nav>
@@ -60,7 +66,30 @@
         </footer>
         <!-- footer close -->
     </div>
-
+<style type="text/css">
+    .event-item{
+        border: 2px #eee solid;
+        padding: 5px;
+    }
+    a:hover{
+        text-decoration: none;
+    }
+    .unit-name{
+        background-color: #8ec92f;
+        color:white;
+        font-size: 3em;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 15px;
+    }
+    .unit-description{
+        text-align: center;
+        background-color: white;
+        color: #222;
+        font-size: 1.3em;
+        padding: 5px;
+    }
+</style>
     <!-- LOAD JS FILES -->
     <script src="<?= base_url() ?>js/jquery.min.js"></script>
     <script src="<?= base_url() ?>js/bootstrap.min.js"></script>
@@ -78,7 +107,7 @@
     <script src="<?= base_url() ?>js/countdown-custom.js"></script>
     <script src="<?= base_url() ?>js/moment.min.js"></script>
     <script src="<?= base_url() ?>js/fullcalendar.min.js"></script>
-
+    <script src="<?= base_url() ?>js/fullcalendar-settings.js"></script>
     <script src="<?= base_url() ?>js/wow.min.js"></script>   
     <script src="<?= base_url() ?>js/custom.js"></script>
 
@@ -89,4 +118,4 @@
 
 </body>
 
-</html>
+ </html>
