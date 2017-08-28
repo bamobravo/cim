@@ -272,8 +272,8 @@
                                 </div>
                                 <div class="right-col">
                                     <a href="<?php echo $current['image_location'] ?>"><i class="fa fa-video-camera"></i></a>
-                                   <!--  <a href="#"><i class="fa fa-volume-up"></i></a>
-                                    <a href="#"><i class="fa fa-file-pdf-o"></i></a> -->
+                                    <a href="#"><i class="fa fa-volume-up"></i></a>
+                                    <a href="<?=base_url('st/v/sermon/'.$current['ID']) ?>"><i class="fa fa-file-pdf-o"></i></a>
                                 </div>
                             </div>
                         <?php endforeach ?>
