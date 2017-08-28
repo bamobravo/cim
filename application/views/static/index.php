@@ -461,9 +461,14 @@
 <?php include_once 'includes/resource.php' ?>
 
 <script type="text/javascript">
+<?php 
+    $date = date_create($events[0]['start_date']);
+    $dateString = $date->format('M j, Y H:i:s 0');
+
+ ?>
     jQuery(document).ready(function() {
             $(function () {
-                $('#defaultCountdown').countdown({until: new Date("<?php echo $events[0]['start_date']; ?>")}); // year, month, date, hour
+                $('#defaultCountdown').countdown({until: new Date("<?php echo $dateString ?>")}); // year, month, date, hour
             });
     });
 </script>
