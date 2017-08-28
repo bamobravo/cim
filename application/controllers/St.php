@@ -47,7 +47,7 @@ class St extends CI_Controller {
 		$return['blog']=$blog;
 		$event =$this->loadModel('event','',' limit 3',' order by start_date desc');
 		$return['events']=$event;
-
+		$return['gallery']=$this->loadModel('gallery','','limit 10','order by uploaded_date desc');
 		return $return;
 	}
 	private function news_detailsData($id)
