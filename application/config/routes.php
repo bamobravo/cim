@@ -53,4 +53,6 @@ $route['default_controller'] = 'St';
 $route['404_override'] = '';
 $route['mc/(:any)/(:any)']='form/$1/$2';
 $route['mc/(:any)/(:any)/(:any)']='form/$1/$2/$3';
+$route['mc/(:any)/(:any)/(:any)/(:any)']='form/$1/$2/$3/$4';
+$route['mc/(:any)/(:any)/(:any)/(:any)/(:any)']='form/$1/$2/$3/$4/$5';
 $route['translate_uri_dashes'] = FALSE;

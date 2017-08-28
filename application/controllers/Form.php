@@ -443,7 +443,10 @@ class Form extends CI_Controller
 		$filter = (bool)$filter;
 		$data = $this->input->post(null,$filter);
 		unset($data["edu-submit"],$data["edu-reset"]);
-		$data = $this->processFormUpload($model,$data);
+		if (is_uploaded_file($_FILES['image_location']['tmp_name'])) {
+			$data = $this->processFormUpload($model,$data);
+		}
+		
 		//pass in the value needed by the model itself and discard the rest.
 		$parameter = $this->extractSubset($data,$model);
 		$this->$model->setArray($parameter);

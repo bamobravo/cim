@@ -463,12 +463,16 @@
 <script type="text/javascript">
 <?php 
     $date = date_create($events[0]['start_date']);
-    $dateString = $date->format('M j, Y H:i:s 0');
+    $y = $date->format('Y');
+    $mn = $date->format('m');
+    $d = $date->format('j');
+    $h = $date->format('H');
+    $m = $date->format('i');
 
  ?>
     jQuery(document).ready(function() {
             $(function () {
-                $('#defaultCountdown').countdown({until: new Date("<?php echo $dateString ?>")}); // year, month, date, hour
+                $('#defaultCountdown').countdown({until: new Date(<?=$y ?>,<?=$mn ?>,<?=$d ?>,<?=$h ?>,<?=$m ?>)}); // year, month, date, hour
             });
     });
 </script>
