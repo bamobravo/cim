@@ -50,7 +50,7 @@
                               <li><a href="<?php echo base_url('st/v/') ?>donations">Donations</a></li>
                                 <li><a href="<?php echo base_url('st/v/') ?>news">News/Blogs</a>
 								</li>
-                                <li><a href="<?php echo base_url('st/v/') ?>u nits">Units</a>
+                                <li><a href="<?php echo base_url('st/v/') ?>units">Units</a>
                                 </li>
                                 <li><a href="<?php echo base_url('st/v/') ?>gallery">Gallery</a></li>
                                 <li><a href="<?php echo base_url('st/v/') ?>contact">Contact</a></li>

@@ -65,7 +65,7 @@ class St extends CI_Controller {
 	}
 	private function galleryData($value='')
 	{
-		$query ="select image_path from gallery order by id desc limit 100";
+		$query ="select image_path from gallery where status =1 order by id desc limit 100";
 		$result = $this->db->query($query);
 		$result = $result->result_array();
 		$return['gallery']= $result;
@@ -73,7 +73,7 @@ class St extends CI_Controller {
 	}
 	private function blogData($id)
 	{
-		$query ="select * from blog where id=?";
+		$query ="select * from blog where id=? and status=1";
 		$result = $this->db->query($query,array($id));
 		$result = $result->result_array();
 		$return = array();
@@ -87,7 +87,7 @@ class St extends CI_Controller {
 	}
 	private function unitsData()
 	{
-		$query ="select * from unit order by id desc";
+		$query ="select * from unit where status=1 order by id desc";
 		$result = $this->db->query($query);
 		$result = $result->result_array();
 		if ($result==false) {
@@ -98,14 +98,14 @@ class St extends CI_Controller {
 	}
 	private function unitData($id)
 	{
-		$query ="select * from unit where id=?";
+		$query ="select * from unit where id=? and status=1 order by unit_name ";
 		$result = $this->db->query($query,array($id));
 		$result = $result->result_array();
 		if ($result==false) {
 			return false;
 		}
 		$return['unit']= $result[0];
-		$query = "select * from unit_activity where unit=?";
+		$query = "select * from unit_activity where unit=? and status=1";
 		$result= $this->db->query($query,array($id));
 		$result=$result->result_array();
 		$return['activities']=$result;
@@ -113,7 +113,7 @@ class St extends CI_Controller {
 	}
 	private function donationsData()
 	{
-		$query = "select purpose from payment_purpose";
+		$query = "select purpose from payment_purpose order by id desc";
 		$result = $this->db->query($query);
 		$result = $result->result_array();
 		$return['purpose']=$result;
@@ -121,7 +121,7 @@ class St extends CI_Controller {
 	}
 	private function eventsData()
 	{
-		$query = "select * from event order by start_date desc";
+		$query = "select * from event where status=1 order by start_date desc";
 		$result = $this->db->query($query);
 		$result = $result->result_array();
 		$return['events']=$result;
@@ -129,7 +129,7 @@ class St extends CI_Controller {
 	}
 	private function sermonsData()
 	{
-		$query = "select * from sermon order by date_posted desc";
+		$query = "select * from sermon where status=1 order by date_posted desc";
 		$result = $this->db->query($query);
 		$result = $result->result_array();
 		$return['sermons']=$result;
@@ -137,7 +137,7 @@ class St extends CI_Controller {
 	}
 	private function sermonData($id)
 	{
-		$query="select * from sermon where id=?";
+		$query="select * from sermon where id=? and status =1";
 		$result = $this->db->query($query,array($id));
 		$result = $result->result_array();
 		$return['sermon']=$result[0];
@@ -164,14 +164,20 @@ class St extends CI_Controller {
 	}
 	private function newsData()
 	{
-		$len = 30;
-		$start=isset($_GET['p'])?$_GET['p']:'';
+		$len = 3;
+		$start=isset($_GET['p'])?$_GET['p']:1;
 		# select new and blog for the display
-		$query = "select * from blog order by id desc limit $start $len";
+		$end = $start * $len;
+		$start = ($start-1) *$len;
+		$return['len']=$len;
+		$query = "select SQL_CALC_FOUND_ROWS * from blog where status =1 order by id desc limit $start, $len";
 		$result = $this->db->query($query);
 		$result = $result->result_array();
 		$return['blogs']=$result;
-		$query = "select * from news order by id desc";
+		$res = $this->db->query("select FOUND_ROWS() as total");
+		$res = $res->result_array();
+		$return['total']=$res[0]['total'];
+		$query = "select  * from news where status =1 order by id desc";
 		$result = $this->db->query($query);
 		$return['news']=$result->result_array();
 		return $return;
@@ -180,7 +186,7 @@ class St extends CI_Controller {
 	{
 		echo "error occured";exit;
 	}
-	private function loadModel($model,$where='',$limit='',$order='')
+	private function loadModel($model,$where='where status =1',$limit='',$order='')
 	{
 		$query = "select * from $model $where $order $limit";
 		$result = $this->db->query($query);

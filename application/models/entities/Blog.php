@@ -20,7 +20,7 @@ static $defaultArray = array('date_posted'=>'CURRENT_TIMESTAMP','status'=>'1');
 //the folder to save must represent a path from the basepath. it should be a relative path,preserve filename will be either true or false. when true,the file will be uploaded with it default filename else the system will pick the current user id in the session as the name of the file.
 static $documentField = array();//array containing an associative array of field that should be regareded as document field. it will contain the setting for max size and data type.
 		
-static $tableAction=array('delete'=>'adm/delete/blog','update'=>'vc/edit/blog');
+static $tableAction=array('delete'=>'adm/delete/blog','update'=>'vc/edit/blog','Activate'=>'getEnabled');
 function __construct($array=array())
 {
 	parent::__construct($array);

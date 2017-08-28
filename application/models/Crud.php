@@ -182,7 +182,7 @@ class Crud extends CI_Model
 		}
 	}
 	//the where contains the list of fieldname and the value
-	function getWhere($parameter,&$totalRow=-1,$start=0,$length=NULL,$resolveForeign=true,$sort='',&$dbObject=null){
+	function getWhere($parameter,&$totalRow=-1,$start=0,$length=NULL,$resolveForeign=true,$sort='order by id desc',&$dbObject=null){
 		$tablename =$this->getTableName();
 		$classname = ucfirst($tablename);
 		$limit="";
@@ -232,7 +232,7 @@ class Crud extends CI_Model
 		}
 		return $objectArray;
 	}
-	function all(&$totalRow=0,$resolveForeign=true,$lower=0,$length=NULL,$sort=''){
+	function all(&$totalRow=0,$resolveForeign=true,$lower=0,$length=NULL,$sort=' order by id desc'){
 		$tablename =$this->getTableName();
 		$limit="";
 		$array=array();

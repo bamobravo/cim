@@ -1,4 +1,4 @@
-﻿ <?php include "includes/header_home.php" ?>
+﻿ <?php include "includes/header_home.php"; ?>
         <!-- subheader begin -->
         <section id="subheader" data-speed="2" data-type="background">
             <div class="container">
@@ -41,7 +41,7 @@
                                             <h3 class="blog-title"><?php echo $blog['title'] ?></h3>
                                         </a><?php echo $blog['summary'] ?>
                                     </div>
-                                    <div class="meta-info">By: <a href="#"><?php echo $blog['author'] ?></a><span>|</span><a href="#">Faith</a>, <a href="#">People</a><span>|</span></div>
+                                    <!-- <div class="meta-info">By: <a href="#"><?php echo $blog['author'] ?></a><span>|</span><a href="#">Faith</a>, <a href="#">People</a><span>|</span></div> -->
                                 </li>
 
                             <?php endforeach ?>
@@ -56,14 +56,29 @@
                         <div class="clearfix"></div>
 
                         <div class="text-center ">
+                        <?php 
+                            //perform the calculation for pagination here
+                        $size = ceil($total/$len);
+                        $next =isset($_GET['p'])?($_GET['p']+1):2;
+                         ?>
                             <ul class="pagination">
-                                <li><a href="#">Prev</a></li>
-                                <li class="active"><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
-                                <li><a href="#">Next</a></li>
+                            <?php if (isset($_GET['p']) && $_GET['p']>1): ?>
+                                <li><a href="?p=<?php echo $_GET['p']-1 ?>">Prev</a></li>
+                            <?php else: ?>
+                                <li class="disabled"><a  href="#">Prev</a></li>
+                            <?php endif ?>
+                                <?php 
+                                    for ($i=1; $i <=$size; $i++) {
+                                    $active = $_GET['p']== $i?"class='active'":'';
+                                        echo "<li $active><a href='?p=$i'>$i</a></li>";
+                                    }
+                                 ?>
+                                 <?php if (isset($_GET['p']) && ($_GET['p'] * $len) < $total ): ?>
+                                    <li><a href="?p=<?=$next ?>">Next</a>
+                                 <?php else: ?>
+                                     <li class="disabled"><a href="#">Next</a>
+                                 <?php endif ?>
+                                </li>
                             </ul>
                         </div>
                     </div>

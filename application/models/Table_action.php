@@ -13,14 +13,14 @@ class Table_action extends CI_Model
 		//function to generate the action link needed for the enable and disable field
 	public function getEnabled($object){
 		$classname = @lcfirst(get_class($object));
-		$link = base_url("ac/disable/$classname");
-		$label = "disable";
+		$link = base_url("adm/disable/$classname");
+		$label = "Deactivate";
 		if (strtolower($classname)=='academic_session') {
 			$label='Deactivate';
 		}
 		if (!@$object->status) {
-			$link = base_url("ac/enable/$classname");
-			$label = "enable";
+			$link = base_url("adm/enable/$classname");
+			$label = "Activate";
 			if (strtolower($classname)=='academic_session') {
 				$label='Activate';
 			}

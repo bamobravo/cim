@@ -20,7 +20,7 @@ static $defaultArray = array();
 //the folder to save must represent a path from the basepath. it should be a relative path,preserve filename will be either true or false. when true,the file will be uploaded with it default filename else the system will pick the current user id in the session as the name of the file.
 static $documentField = array('image_location'=>array(array('png','jpeg','gif','jpg'),1002400,'upload/images/events'));//array containing an associative array of field that should be regareded as document field. it will contain the setting for max size and data type.
 		
-static $tableAction=array('delete'=>'adm/delete/event','update'=>'adm/edit/event');
+static $tableAction=array('delete'=>'adm/delete/event','update'=>'adm/edit/event','Activate'=>'getEnabled');
 function __construct($array=array())
 {
 	parent::__construct($array);
@@ -33,7 +33,10 @@ function getNameFormField($value=''){
 
 }
 function getStart_dateFormField($value=''){
-	return " ";
+	return " <div class='form-group'>
+	<label for='start_date'>Event Start Date</label>
+	<input type='datetime' name='start_date' value='$value' class='form-control' />
+	</div>";
 
 }
 function getEnd_dateFormField($value=''){
@@ -69,8 +72,13 @@ function getCommentFormField($value=''){
 
 }
 function getUnitFormField($value=''){
+	$option = $this->loadOption(array('table'=>'unit','display'=>'unit_name'));
 	return "<div class='form-group'>
-	<label for='unit' >Unit</label><input type='number' name='unit' id='unit' value='$value' class='form-control'  />
+	<label for='unit' >Unit</label>
+	<select  name='unit' id='unit'  class='form-control'  >
+	<option value=''>..choose..</option>
+	$option
+	</select>
 </div> ";
 
 }

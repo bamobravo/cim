@@ -16,14 +16,14 @@
 
         <!-- content begin -->
         <div id="content">
-
+        <div class="article-title">All church Units</div>
             <div class="container">
                 <div class="row">
                     <!-- event item begin -->
                     <?php if ($units): ?>
                         <?php foreach ($units as $unit): ?>
-                            <div >
-                               <a class=" event-item" href="<?php echo base_url('st/v/unit/'.$unit['ID']) ?>" >
+                            <div class="church-unit">
+                               <a class="" href="<?php echo base_url('st/v/unit/'.$unit['ID']) ?>" >
                                    <div class="unit-name"><?php echo $unit['unit_name'] ?></div>
                                    <div class="unit-description"><?php echo $unit['brief_description'] ?></div>
                                </a>
@@ -88,6 +88,15 @@
         color: #222;
         font-size: 1.3em;
         padding: 5px;
+    }
+    .church-unit{
+        padding: 5px;
+        /*border: 2px solid green;*/
+        margin-top: 30px;
+        box-shadow: 1px 1px 5px;
+    }
+    .church-unit:hover{
+        opacity: 0.6;
     }
 </style>
     <!-- LOAD JS FILES -->

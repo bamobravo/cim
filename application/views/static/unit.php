@@ -6,7 +6,7 @@
                 <div class="row">
                     <div class="col-md-12">
 
-                        <h1><?php echo $unit['unit_name'] ?></h1>
+                        <h1><?php echo $unit['unit_name'] ?> Unit</h1>
                     </div>
                 </div>
             </div>
@@ -21,7 +21,7 @@
                 <div class="row">
                     <div class="col-md-10 col-md-offset-1">
 
-                  <div class="article-title"><?php echo $unit['unit_name'] ?></div>
+                  <div class="article-title"><?php echo $unit['unit_name'] ?> Unit</div>
                   <h3><?php echo $unit['unit_name'] ?> In Summary</h3>
                  <div>
                      <?php echo $unit['brief_description'] ?>

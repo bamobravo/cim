@@ -83,6 +83,22 @@ private function showChurchInfo($value='')
 	$data['title']='Church Information';
 	$this->load->view('church',$data);
 }
+public function enable($model,$id)
+{
+	$query="update $model set status =1 where id=?";
+	$result = $this->db->query($query,array($id));
+	$mes['status']=$result;
+	$mes['message']=$result?"$model enabled successfully":"error while enabling $model";
+	echo json_encode($mes);
+}
+public function disable($model,$id)
+{
+	$query="update $model set status =0 where id=?";
+	$result = $this->db->query($query,array($id));
+	$mes['status']=$result;
+	$mes['message']=$result?"$model disabled successfully":"error while disabling $model";
+	echo json_encode($mes);
+}
 private function getChurch()
 {
 	$query ="select id from church order by id";
