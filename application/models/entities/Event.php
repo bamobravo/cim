@@ -35,7 +35,7 @@ function getNameFormField($value=''){
 function getStart_dateFormField($value=''){
 	return " <div class='form-group'>
 	<label for='start_date'>Event Start Date</label>
-	<input type='datetime' name='start_date' value='$value' class='form-control' />
+	<input type='datetime' name='start_date' value='$value' class='form-control' placeholder='YYYY-MM-DD hh:mm:ss'/>
 	</div>";
 
 }

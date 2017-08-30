@@ -88,15 +88,15 @@ class CI_Config {
 		// Set the base_url automatically if none was provided
 		if (empty($this->config['base_url']))
 		{
-			if (isset($_SERVER['SERVER_ADDR']))
+			if (isset($_SERVER['SERVER_NAME']))
 			{
 				if (strpos($_SERVER['SERVER_ADDR'], ':') !== FALSE)
 				{
-					$server_addr = '['.$_SERVER['SERVER_ADDR'].']';
+					$server_addr = '['.$_SERVER['SERVER_NAME'].']';
 				}
 				else
 				{
-					$server_addr = $_SERVER['SERVER_ADDR'];
+					$server_addr = $_SERVER['SERVER_NAME'];
 				}
 
 				$base_url = (is_https() ? 'https' : 'http').'://'.$server_addr

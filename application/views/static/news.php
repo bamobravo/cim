@@ -69,11 +69,12 @@
                             <?php endif ?>
                                 <?php 
                                     for ($i=1; $i <=$size; $i++) {
-                                    $active = $_GET['p']== $i?"class='active'":'';
+                                        $isActive = (isset($_GET['p']) && $i==$_GET['p']) || (!isset($_GET['p']) && $i===1);
+                                        $active = $isActive?"class='active'":'';
                                         echo "<li $active><a href='?p=$i'>$i</a></li>";
                                     }
                                  ?>
-                                 <?php if (isset($_GET['p']) && ($_GET['p'] * $len) < $total ): ?>
+                                 <?php if ((isset($_GET['p']) && ($_GET['p'] * $len) < $total) || (!isset($_GET['p']))): ?>
                                     <li><a href="?p=<?=$next ?>">Next</a>
                                  <?php else: ?>
                                      <li class="disabled"><a href="#">Next</a>

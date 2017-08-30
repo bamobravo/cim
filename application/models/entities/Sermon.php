@@ -63,7 +63,7 @@ function getBrief_descriptionFormField($value=''){
 function getImage_locationFormField($value=''){
 	return "<div class='form-group'>
 	<label for='image_location' >Enter The link to Sermon youtube view</label>
-		<input type='text' name='image_location' id='image_location' value='$value' class='form-control'  />
+		<input type='text' name='image_location' id='image_location' value='$value' class='form-control' placeholder='copy the address on the browser here'  />
 </div> ";
 
 }
